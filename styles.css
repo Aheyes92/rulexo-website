@@ -1,0 +1,104 @@
+:root {
+  --bg: #0F0F0F;
+  --surface: #161616;
+  --accent: #2D6A4F;
+  --text: #FFFFFF;
+  --muted: #888888;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+
+/* Fade-in on scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accent button */
+.btn-accent {
+  background-color: #2D6A4F !important;
+  color: #ffffff !important;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border: none !important;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-accent:hover {
+  background-color: #245c43 !important;
+  box-shadow: 0 0 22px rgba(45, 106, 79, 0.5);
+  color: #ffffff !important;
+}
+
+/* Card surface */
+.card {
+  background-color: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Nav link hover */
+.nav-link {
+  color: var(--muted);
+  transition: color 0.2s ease;
+  font-family: 'Lato', sans-serif;
+}
+.nav-link:hover {
+  color: var(--text);
+}
+.nav-link.active {
+  color: var(--text);
+}
+
+/* Accent label */
+.label-accent {
+  color: var(--accent);
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+}
+
+/* Step number */
+.step-number {
+  color: var(--accent);
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Horizontal rule accent */
+.rule-accent {
+  border: none;
+  border-top: 1px solid rgba(45, 106, 79, 0.25);
+}
+
+/* Form input */
+.form-input {
+  background-color: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  font-family: 'Lato', sans-serif;
+  transition: border-color 0.2s ease;
+  outline: none;
+  width: 100%;
+}
+.form-input:focus {
+  border-color: var(--accent);
+}
+.form-input::placeholder {
+  color: var(--muted);
+}

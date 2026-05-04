@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Rulexo</title>
+  <meta name="description" content="Get your free trade business audit. Takes 2 minutes. Rulexo will come back to you within 24 hours." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="antialiased">
+
+  <!-- Nav -->
+  <nav class="w-full px-6 py-5 flex items-center justify-between max-w-5xl mx-auto">
+    <a href="index.html" class="font-bold text-xl tracking-tight text-white" style="font-family: 'Merriweather', serif;">rulexo</a>
+    <ul class="flex gap-8 text-sm">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page header -->
+  <section class="max-w-5xl mx-auto px-6 pt-20 pb-12">
+    <p class="label-accent uppercase mb-6 tracking-widest">Free audit</p>
+    <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight max-w-xl mb-4" style="font-family: 'Merriweather', serif;">
+      Get your free trade business audit
+    </h1>
+    <p class="text-base leading-relaxed" style="color: var(--muted); font-family: 'Lato', sans-serif;">
+      Takes 2 minutes. We'll come back to you within 24 hours.
+    </p>
+  </section>
+
+  <!-- Form -->
+  <section class="max-w-5xl mx-auto px-6 pb-32">
+    <div class="max-w-xl fade-in">
+      <form
+        name="contact"
+        method="POST"
+        netlify
+        data-netlify="true"
+        class="flex flex-col gap-6"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+
+        <div>
+          <label class="block text-sm font-bold mb-2 text-white" style="font-family: 'Lato', sans-serif;" for="name">Name</label>
+          <input
+            class="form-input px-4 py-3 rounded-md text-sm"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            required
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold mb-2 text-white" style="font-family: 'Lato', sans-serif;" for="business-type">Business type</label>
+          <input
+            class="form-input px-4 py-3 rounded-md text-sm"
+            type="text"
+            id="business-type"
+            name="business-type"
+            placeholder="e.g. Plumber, Electrician, Builder"
+            required
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold mb-2 text-white" style="font-family: 'Lato', sans-serif;" for="phone">Phone number</label>
+          <input
+            class="form-input px-4 py-3 rounded-md text-sm"
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="07700 900000"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold mb-2 text-white" style="font-family: 'Lato', sans-serif;" for="email">Email</label>
+          <input
+            class="form-input px-4 py-3 rounded-md text-sm"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold mb-2 text-white" style="font-family: 'Lato', sans-serif;" for="time-sink">What's taking up most of your time right now?</label>
+          <textarea
+            class="form-input px-4 py-3 rounded-md text-sm resize-none"
+            id="time-sink"
+            name="time-sink"
+            rows="5"
+            placeholder="Tell us where the hours go..."
+            required
+          ></textarea>
+        </div>
+
+        <div>
+          <button type="submit" class="btn-accent px-8 py-4 rounded-md text-sm w-full md:w-auto">
+            Send my details
+          </button>
+        </div>
+      </form>
+
+      <!-- Email fallback -->
+      <div class="mt-10 pt-8" style="border-top: 1px solid rgba(255,255,255,0.06);">
+        <p class="text-sm" style="color: var(--muted); font-family: 'Lato', sans-serif;">
+          Prefer email? Reach us directly at
+          <a href="mailto:aheyes1992@gmail.com" class="text-white hover:underline underline-offset-4 transition-colors duration-200">aheyes1992@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t py-8 px-6" style="border-color: rgba(255,255,255,0.06);">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm" style="color: var(--muted); font-family: 'Lato', sans-serif;">
+      <span class="font-bold text-white" style="font-family: 'Merriweather', serif;">rulexo</span>
+      <div class="flex gap-6">
+        <span>rulexo.co.uk</span>
+        <a href="mailto:aheyes1992@gmail.com" class="hover:text-white transition-colors duration-200">aheyes1992@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

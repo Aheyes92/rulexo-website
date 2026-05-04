@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rulexo — AI Systems for UK Tradespeople</title>
+  <meta name="description" content="Rulexo builds AI automation systems that handle enquiries, follow-ups and marketing for UK trade businesses. No missed leads, no evenings lost to admin." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Critical overrides — loaded after Tailwind CDN injection */
+    :root {
+      --bg: #0F0F0F;
+      --surface: #161616;
+      --accent: #2D6A4F;
+      --text: #FFFFFF;
+      --muted: #888888;
+    }
+    body { background-color: #0F0F0F; color: #FFFFFF; }
+    .btn-accent {
+      background-color: #2D6A4F !important;
+      color: #ffffff !important;
+      border: none !important;
+      text-decoration: none;
+    }
+    .btn-accent:hover {
+      background-color: #245c43 !important;
+      box-shadow: 0 0 22px rgba(45, 106, 79, 0.55);
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Nav -->
+  <nav class="w-full px-6 py-5 flex items-center justify-between max-w-5xl mx-auto">
+    <a href="index.html" class="font-bold text-xl tracking-tight text-white" style="font-family: 'Merriweather', serif;">rulexo</a>
+    <ul class="flex gap-8 text-sm">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative max-w-5xl mx-auto px-6 pt-20 pb-28 text-center" style="overflow: visible;">
+    <!-- Green glow orb — real element, not pseudo, for reliable rendering -->
+    <div style="
+      position: absolute;
+      top: 38%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 860px;
+      height: 580px;
+      background: radial-gradient(ellipse at center,
+        rgba(45, 106, 79, 0.7) 0%,
+        rgba(45, 106, 79, 0.3) 35%,
+        rgba(45, 106, 79, 0.08) 60%,
+        transparent 75%
+      );
+      pointer-events: none;
+      z-index: 0;
+    "></div>
+
+    <div style="position: relative; z-index: 1;">
+      <p class="label-accent uppercase mb-6 tracking-widest">AI Systems for UK Tradespeople</p>
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-8 text-white max-w-3xl mx-auto" style="font-family: 'Merriweather', serif;">
+        You didn't train for years to spend your nights doing paperwork.
+      </h1>
+      <p class="text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed" style="color: #DDDDDD; font-family: 'Lato', sans-serif;">
+        Rulexo builds AI systems that handle your enquiries, follow-ups and marketing automatically. No missed leads, no chasing work, no evenings lost to admin.
+      </p>
+      <a href="contact.html" class="btn-accent inline-block px-8 py-4 rounded-md text-sm">
+        Start your free audit
+      </a>
+    </div>
+  </section>
+
+  <!-- Problem section -->
+  <section class="max-w-5xl mx-auto px-6 pb-28">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+      <div class="card fade-in rounded-xl p-8">
+        <p class="label-accent mb-3">Time</p>
+        <p class="text-white font-bold text-lg mb-3" style="font-family: 'Merriweather', serif;">Every hour on the tools is an hour you're not running your business.</p>
+        <p class="text-sm leading-relaxed" style="color: var(--muted); font-family: 'Lato', sans-serif;">Chasing quotes, sending follow-ups, replying to enquiries — it never stops.</p>
+      </div>
+
+      <div class="card fade-in rounded-xl p-8" style="transition-delay: 0.1s;">
+        <p class="label-accent mb-3">Money</p>
+        <p class="text-white font-bold text-lg mb-3" style="font-family: 'Merriweather', serif;">Missed enquiries are missed revenue. It's that simple.</p>
+        <p class="text-sm leading-relaxed" style="color: var(--muted); font-family: 'Lato', sans-serif;">Most trades lose work to competitors simply because they didn't reply fast enough.</p>
+      </div>
+
+      <div class="card fade-in rounded-xl p-8" style="transition-delay: 0.2s;">
+        <p class="label-accent mb-3">Admin</p>
+        <p class="text-white font-bold text-lg mb-3" style="font-family: 'Merriweather', serif;">The paperwork doesn't care how tired you are.</p>
+        <p class="text-sm leading-relaxed" style="color: var(--muted); font-family: 'Lato', sans-serif;">Invoices, estimates, scheduling — it piles up and it follows you home.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Combined: Before / Pipeline / After -->
+  <style>
+    .combo-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 2rem;
+    }
+    .combo-col-phone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .combo-col-pipe {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .combo-grid { flex-direction: row; align-items: stretch; gap: 32px; }
+      .combo-col-phone { flex: 28; min-width: 0; }
+      .combo-col-pipe  { flex: 44; min-width: 0; }
+    }
+    .pipe-nodes {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      width: 100%;
+    }
+    .pipe-node {
+      flex: 0 0 48px;
+      background: #161616;
+      border: 1.5px solid rgba(45,106,79,0.4);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10.5px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      color: white;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .pipe-conn {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow: visible;
+      min-height: 24px;
+    }
+    .pipe-conn::before {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 50%;
+      width: 1.5px;
+      transform: translateX(-50%);
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(45,106,79,0.25) 0px, rgba(45,106,79,0.25) 3px,
+        transparent 3px, transparent 7px
+      );
+    }
+    .pipe-arrow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #2D6A4F;
+      font-size: 10px;
+      line-height: 1;
+      opacity: 0.5;
+      z-index: 2;
+    }
+    .pipe-glow {
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 50%;
+      width: 2.5px;
+      transform: translateX(-50%);
+      background: #2D6A4F;
+      opacity: 0;
+    }
+    .pipe-pulse {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #52b788;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+    @keyframes nodeFlash {
+      0%, 100% { background: #161616; border-color: rgba(45,106,79,0.4); border-width: 1.5px; }
+      4%       { background: #1a3328; border-color: #2D6A4F; border-width: 2.5px; }
+      22%      { background: #161616; border-color: rgba(45,106,79,0.4); border-width: 1.5px; }
+    }
+    @keyframes glowFlash {
+      0%, 10%, 100% { opacity: 0; }
+      5%            { opacity: 1; }
+    }
+    @keyframes pulseDot {
+      0%   { top: 0%;   opacity: 0; }
+      1%   { top: 0%;   opacity: 1; }
+      9%   { top: 100%; opacity: 1; }
+      10%  { top: 100%; opacity: 0; }
+      100% { top: 100%; opacity: 0; }
+    }
+  </style>
+  <section class="fade-in" style="background-color: #0F0F0F; padding: 80px 40px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+
+      <p class="label-accent uppercase tracking-widest text-center" style="margin-bottom: 3.5rem;">What Rulexo does for you</p>
+
+      <div class="combo-grid">
+
+        <!-- LEFT: Before phone -->
+        <div class="combo-col-phone">
+          <p class="text-xs font-bold uppercase text-center" style="color:#888888; font-family:'Lato',sans-serif; letter-spacing:0.1em; margin-bottom:1rem;">Tom's evening without Rulexo</p>
+          <div style="background:#0a0a0a; border:2px solid rgba(255,255,255,0.1); border-radius:26px; padding:16px 12px 22px; width:220px; height:420px; overflow:hidden; box-sizing:border-box;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:12px; opacity:0.3;">
+              <span style="font-size:9px; color:#888; font-family:'Lato',sans-serif;">21:47</span>
+              <span style="font-size:8px; color:#888; letter-spacing:2px;">▮▮▮</span>
+            </div>
+            <div style="background:#1c1c1e; border-radius:9px; padding:8px 10px; margin-bottom:5px; border-left:3px solid #25d366;">
+              <div style="font-size:8px; color:#555; font-family:'Lato',sans-serif; margin-bottom:2px;">WhatsApp · now</div>
+              <div style="font-size:9px; color:#999; font-family:'Lato',sans-serif;">Dave: "Can you quote the back garden?"</div>
+            </div>
+            <div style="background:#1c1c1e; border-radius:9px; padding:8px 10px; margin-bottom:5px; margin-top:-4px; border-left:3px solid #e05252; position:relative; z-index:1;">
+              <div style="font-size:8px; color:#555; font-family:'Lato',sans-serif; margin-bottom:2px;">Missed calls · 19:32</div>
+              <div style="font-size:9px; color:#999; font-family:'Lato',sans-serif;">07712 834 901 — 2 missed</div>
+            </div>
+            <div style="background:#1c1c1e; border-radius:9px; padding:8px 10px; margin-bottom:5px; border-left:3px solid #25d366;">
+              <div style="font-size:8px; color:#555; font-family:'Lato',sans-serif; margin-bottom:2px;">WhatsApp · 18:51</div>
+              <div style="font-size:9px; color:#999; font-family:'Lato',sans-serif;">Sarah: "Just checking if you got my message..."</div>
+            </div>
+            <div style="background:#1c1c1e; border-radius:9px; padding:8px 10px; margin-top:-4px; border-left:3px solid #444; position:relative; z-index:1;">
+              <div style="font-size:8px; color:#555; font-family:'Lato',sans-serif; margin-bottom:3px;">Reminders</div>
+              <div style="font-size:9px; color:#777; font-family:'Lato',sans-serif; line-height:1.7;">&#9744; Reply to Mike<br/>&#9744; Send Johnson invoice<br/>&#9744; Follow up — Ash St garden</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CENTRE: Vertical pipeline -->
+        <div class="combo-col-pipe">
+          <p style="visibility:hidden; font-size:0.75rem; margin-bottom:1rem; font-family:'Lato',sans-serif;" aria-hidden="true">placeholder</p>
+          <div class="pipe-nodes">
+
+            <div class="pipe-node" style="animation: nodeFlash 5s ease 0s infinite;">Customer enquiry</div>
+
+            <div class="pipe-conn">
+              <div class="pipe-glow"  style="animation: glowFlash 5s linear 0s infinite;"></div>
+              <div class="pipe-pulse" style="animation: pulseDot  5s linear 0s infinite;"></div>
+              <div class="pipe-arrow">&#9660;</div>
+            </div>
+
+            <div class="pipe-node" style="animation: nodeFlash 5s ease 0.5s infinite;">Rulexo captures it</div>
+
+            <div class="pipe-conn">
+              <div class="pipe-glow"  style="animation: glowFlash 5s linear 0.5s infinite;"></div>
+              <div class="pipe-pulse" style="animation: pulseDot  5s linear 0.5s infinite;"></div>
+              <div class="pipe-arrow">&#9660;</div>
+            </div>
+
+            <div class="pipe-node" style="animation: nodeFlash 5s ease 1s infinite;">Quote generated</div>
+
+            <div class="pipe-conn">
+              <div class="pipe-glow"  style="animation: glowFlash 5s linear 1s infinite;"></div>
+              <div class="pipe-pulse" style="animation: pulseDot  5s linear 1s infinite;"></div>
+              <div class="pipe-arrow">&#9660;</div>
+            </div>
+
+            <div class="pipe-node" style="animation: nodeFlash 5s ease 1.5s infinite;">Sent to customer</div>
+
+            <div class="pipe-conn">
+              <div class="pipe-glow"  style="animation: glowFlash 5s linear 1.5s infinite;"></div>
+              <div class="pipe-pulse" style="animation: pulseDot  5s linear 1.5s infinite;"></div>
+              <div class="pipe-arrow">&#9660;</div>
+            </div>
+
+            <div class="pipe-node" style="animation: nodeFlash 5s ease 2s infinite;">Follow-up scheduled</div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT: After phone -->
+        <div class="combo-col-phone">
+          <p class="text-xs font-bold uppercase text-center" style="color:#2D6A4F; font-family:'Lato',sans-serif; letter-spacing:0.1em; margin-bottom:1rem;">Tom's evening with Rulexo</p>
+          <div style="background:#0a0a0a; border:2px solid rgba(45,106,79,0.4); border-radius:26px; padding:16px 12px 22px; width:220px; height:420px; overflow:hidden; box-sizing:border-box;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:12px; opacity:0.3;">
+              <span style="font-size:9px; color:#888; font-family:'Lato',sans-serif;">21:47</span>
+              <span style="font-size:8px; color:#888; letter-spacing:2px;">▮▮▮</span>
+            </div>
+            <div style="background:#0c2218; border-radius:9px; padding:12px 13px; border:1px solid rgba(45,106,79,0.45); margin-bottom:10px;">
+              <div style="font-size:8px; color:#4ade80; font-family:'Lato',sans-serif; font-weight:700; letter-spacing:0.08em; margin-bottom:7px;">RULEXO · just now</div>
+              <div style="font-size:9px; color:#cccccc; font-family:'Lato',sans-serif; line-height:1.8;">3 enquiries handled.<br/>2 garden quotes sent automatically.<br/>Follow-ups scheduled.</div>
+            </div>
+            <div style="text-align:center; padding-top:12px;">
+              <div style="font-size:9px; color:rgba(255,255,255,0.18); font-family:'Lato',sans-serif;">No other notifications</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center" style="margin-top:3.5rem;">
+        <p style="color:#888888; font-family:'Lato',sans-serif; margin-bottom:1.5rem;">Your system works while you switch off.</p>
+        <a href="contact.html" class="btn-accent inline-block px-8 py-4 rounded-md text-sm">Start your free audit</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Trust block -->
+  <section class="max-w-5xl mx-auto px-6 pb-32 text-center">
+    <hr class="rule-accent mb-16" />
+    <div class="max-w-2xl mx-auto fade-in">
+      <p class="text-2xl md:text-3xl font-bold leading-snug text-white" style="font-family: 'Merriweather', serif;">
+        "We know what it's like to get home exhausted and still have two hours of work waiting for you. That's exactly why Rulexo exists."
+      </p>
+    </div>
+    <div class="mt-10 fade-in">
+      <a href="contact.html" class="btn-accent inline-block px-8 py-4 rounded-md text-sm">
+        Start your free audit
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t py-8 px-6" style="border-color: rgba(255,255,255,0.06);">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm" style="color: var(--muted); font-family: 'Lato', sans-serif;">
+      <span class="font-bold text-white" style="font-family: 'Merriweather', serif;">rulexo</span>
+      <div class="flex gap-6">
+        <span>rulexo.co.uk</span>
+        <a href="mailto:aheyes1992@gmail.com" class="hover:text-white transition-colors duration-200">aheyes1992@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
