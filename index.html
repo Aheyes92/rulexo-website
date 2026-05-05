@@ -7,358 +7,1396 @@
   <meta name="description" content="Rulexo builds AI automation systems that handle enquiries, follow-ups and marketing for UK trade businesses. No missed leads, no evenings lost to admin." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Critical overrides — loaded after Tailwind CDN injection */
+    *, *::before, *::after { box-sizing: border-box; }
+
     :root {
-      --bg: #0F0F0F;
-      --surface: #161616;
-      --accent: #2D6A4F;
-      --text: #FFFFFF;
-      --muted: #888888;
+      --bg:        #080808;
+      --surface:   #0e0e0e;
+      --surface-2: #131313;
+      --border:    rgba(255,255,255,0.07);
+      --green:     #2D6A4F;
+      --green-lt:  #52b788;
+      --text:      #efefef;
+      --muted:     #555;
     }
-    body { background-color: #0F0F0F; color: #FFFFFF; }
-    .btn-accent {
-      background-color: #2D6A4F !important;
-      color: #ffffff !important;
-      border: none !important;
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Lato', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ───────────────────────────── */
+    #site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      background: rgba(8,8,8,0.88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 40px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--green-lt);
       text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
-    .btn-accent:hover {
-      background-color: #245c43 !important;
-      box-shadow: 0 0 22px rgba(45, 106, 79, 0.55);
-    }
-  </style>
-</head>
-<body class="antialiased">
-
-  <!-- Nav -->
-  <nav class="w-full px-6 py-5 flex items-center justify-between max-w-5xl mx-auto">
-    <a href="index.html" class="font-bold text-xl tracking-tight text-white" style="font-family: 'Merriweather', serif;">rulexo</a>
-    <ul class="flex gap-8 text-sm">
-      <li><a href="index.html" class="nav-link active">Home</a></li>
-      <li><a href="services.html" class="nav-link">Services</a></li>
-      <li><a href="contact.html" class="nav-link">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero -->
-  <section class="relative max-w-5xl mx-auto px-6 pt-20 pb-28 text-center" style="overflow: visible;">
-    <!-- Green glow orb — real element, not pseudo, for reliable rendering -->
-    <div style="
-      position: absolute;
-      top: 38%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 860px;
-      height: 580px;
-      background: radial-gradient(ellipse at center,
-        rgba(45, 106, 79, 0.7) 0%,
-        rgba(45, 106, 79, 0.3) 35%,
-        rgba(45, 106, 79, 0.08) 60%,
-        transparent 75%
-      );
-      pointer-events: none;
-      z-index: 0;
-    "></div>
-
-    <div style="position: relative; z-index: 1;">
-      <p class="label-accent uppercase mb-6 tracking-widest">AI Systems for UK Tradespeople</p>
-      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-8 text-white max-w-3xl mx-auto" style="font-family: 'Merriweather', serif;">
-        You didn't train for years to spend your nights doing paperwork.
-      </h1>
-      <p class="text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed" style="color: #DDDDDD; font-family: 'Lato', sans-serif;">
-        Rulexo builds AI systems that handle your enquiries, follow-ups and marketing automatically. No missed leads, no chasing work, no evenings lost to admin.
-      </p>
-      <a href="contact.html" class="btn-accent inline-block px-8 py-4 rounded-md text-sm">
-        Start your free audit
-      </a>
-    </div>
-  </section>
-
-  <!-- Problem section -->
-  <section class="max-w-5xl mx-auto px-6 pb-28">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-
-      <div class="card fade-in rounded-xl p-8">
-        <p class="label-accent mb-3">Time</p>
-        <p class="text-white font-bold text-lg mb-3" style="font-family: 'Merriweather', serif;">Every hour on the tools is an hour you're not running your business.</p>
-        <p class="text-sm leading-relaxed" style="color: var(--muted); font-family: 'Lato', sans-serif;">Chasing quotes, sending follow-ups, replying to enquiries — it never stops.</p>
-      </div>
-
-      <div class="card fade-in rounded-xl p-8" style="transition-delay: 0.1s;">
-        <p class="label-accent mb-3">Money</p>
-        <p class="text-white font-bold text-lg mb-3" style="font-family: 'Merriweather', serif;">Missed enquiries are missed revenue. It's that simple.</p>
-        <p class="text-sm leading-relaxed" style="color: var(--muted); font-family: 'Lato', sans-serif;">Most trades lose work to competitors simply because they didn't reply fast enough.</p>
-      </div>
-
-      <div class="card fade-in rounded-xl p-8" style="transition-delay: 0.2s;">
-        <p class="label-accent mb-3">Admin</p>
-        <p class="text-white font-bold text-lg mb-3" style="font-family: 'Merriweather', serif;">The paperwork doesn't care how tired you are.</p>
-        <p class="text-sm leading-relaxed" style="color: var(--muted); font-family: 'Lato', sans-serif;">Invoices, estimates, scheduling — it piles up and it follows you home.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Combined: Before / Pipeline / After -->
-  <style>
-    .combo-grid {
+    .nav-links {
       display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 36px;
     }
-    .combo-col-phone {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .nav-links a {
+      font-size: 0.875rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
     }
-    .combo-col-pipe {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    @media (min-width: 768px) {
-      .combo-grid { flex-direction: row; align-items: stretch; gap: 32px; }
-      .combo-col-phone { flex: 28; min-width: 0; }
-      .combo-col-pipe  { flex: 44; min-width: 0; }
-    }
-    .pipe-nodes {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      width: 100%;
-    }
-    .pipe-node {
-      flex: 0 0 48px;
-      background: #161616;
-      border: 1.5px solid rgba(45,106,79,0.4);
+    .nav-links a:hover,
+    .nav-links a.active { color: #fff; }
+    .nav-cta {
+      background: var(--green);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.8125rem;
+      padding: 9px 20px;
       border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      font-family: 'Lato', sans-serif;
+    }
+    .nav-cta:hover { background: #245c43; transform: translateY(-1px); }
+
+    /* ── HERO ──────────────────────────── */
+    #hero {
+      position: relative;
+      text-align: center;
+      padding: 120px 40px 140px;
+      overflow: hidden;
+      min-height: 88vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 10.5px;
+    }
+    #hero-canvas,
+    #hero-noise {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      display: block;
+    }
+    #hero-noise { z-index: 0; }
+    #hero-canvas { z-index: 1; }
+    #hero-content {
+      position: relative;
+      z-index: 20;
+      max-width: 860px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* ── ROTATING HEADLINE WORDS ───────── */
+    .hero-rotating {
+      display: block;
+      position: relative;
+      height: 1.15em;
+      overflow: visible;
+      margin-top: 4px;
+    }
+    .hero-word {
+      position: absolute;
+      inset: 0;
+      font-style: italic;
+      color: var(--green-lt);
+      opacity: 0;
+      transform: translateY(56px);
+      transition: opacity 0.55s cubic-bezier(0.22,1,0.36,1),
+                  transform 0.55s cubic-bezier(0.22,1,0.36,1);
+      white-space: nowrap;
+    }
+    .hero-word.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hero-word.exit {
+      opacity: 0;
+      transform: translateY(-56px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .hero-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.03);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(45,106,79,0.3);
+      background: rgba(45,106,79,0.08);
+      color: var(--green-lt);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 36px;
+    }
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green-lt);
+      animation: badgepulse 2s ease-in-out infinite;
+    }
+    @keyframes badgepulse {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.35; }
+    }
+    .hero-headline {
+      font-family: 'Merriweather', serif;
+      font-size: clamp(2.75rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      color: #fff;
+      margin: 0 0 28px;
+    }
+    .hero-headline em {
+      font-style: italic;
+      color: var(--green-lt);
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 1.5vw, 1.125rem);
+      line-height: 1.75;
+      color: #666;
+      max-width: 500px;
+      margin: 0 auto 48px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── BUTTONS ───────────────────────── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--green);
+      color: #fff;
       font-family: 'Lato', sans-serif;
       font-weight: 700;
-      color: white;
-      text-align: center;
-      position: relative;
-      z-index: 1;
+      font-size: 0.9375rem;
+      padding: 14px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
     }
+    .btn-primary:hover {
+      background: #245c43;
+      box-shadow: 0 0 32px rgba(45,106,79,0.4);
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: #888;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.9375rem;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.1);
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s, transform 0.15s;
+    }
+    .btn-outline:hover {
+      color: #fff;
+      border-color: rgba(255,255,255,0.25);
+      transform: translateY(-2px);
+    }
+
+    /* ── LAYOUT ────────────────────────── */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .section { padding: 88px 0; }
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,0.07), transparent);
+    }
+    .section-label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 18px;
+    }
+    .section-heading {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      line-height: 1.15;
+      color: #fff;
+      margin: 0;
+    }
+    .section-heading em {
+      font-style: italic;
+      color: var(--green-lt);
+    }
+
+    /* ── STATS ─────────────────────────── */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .stat-item {
+      text-align: center;
+      padding: 52px 24px;
+    }
+    .stat-item + .stat-item {
+      border-left: 1px solid rgba(255,255,255,0.05);
+    }
+    .stat-value {
+      font-family: 'Merriweather', serif;
+      font-size: 2.75rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .stat-label {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── SPLIT ─────────────────────────── */
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .pipeline {
+      background: var(--surface-2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 18px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+    }
+    .pipe-step {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 20px;
+      background: rgba(45,106,79,0.04);
+      border: 1px solid rgba(45,106,79,0.12);
+      border-radius: 10px;
+      transition: background 0.35s ease, border-color 0.35s ease;
+    }
+    .pipe-step.pipe-active {
+      background: rgba(45,106,79,0.16);
+      border-color: rgba(82,183,136,0.45);
+    }
+    .pipe-dot {
+      position: absolute;
+      left: 18px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(45,106,79,0.4);
+      flex-shrink: 0;
+      transition: background 0.35s ease, box-shadow 0.35s ease;
+    }
+    .pipe-step.pipe-active .pipe-dot {
+      background: var(--green-lt);
+      box-shadow: 0 0 10px rgba(82,183,136,0.65);
+    }
+    .pipe-step span { font-size: 1rem; color: #888; transition: color 0.35s ease; text-align: center; }
+    .pipe-step.pipe-active span { color: #e8e8e8; }
     .pipe-conn {
+      display: flex;
+      justify-content: center;
+      padding: 5px 0;
+      color: rgba(45,106,79,0.3);
+      font-size: 1.125rem;
+      transition: color 0.35s ease;
+    }
+    .pipe-conn.pipe-conn-active { color: rgba(82,183,136,0.7); }
+
+    /* ── SERVICE CARDS ─────────────────── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+    .service-card {
+      position: relative;
+      background: var(--surface-2);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-left: 3px solid #2D6A4F;
+      border-radius: 16px;
+      padding: 32px;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .service-card:hover {
+      border-color: rgba(45,106,79,0.3);
+      border-left-color: #2D6A4F;
+      transform: translateY(-3px);
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(
+        135deg,
+        transparent 15%,
+        rgba(82,183,136,0.18) 45%,
+        rgba(45,106,79,0.13) 65%,
+        transparent 85%
+      );
+      background-size: 250% 250%;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+      animation: gradientSweep 7s ease-in-out infinite paused;
+      pointer-events: none;
+    }
+    .service-card:hover::before {
+      opacity: 1;
+      animation-play-state: running;
+    }
+    .service-num {
+      font-family: 'Merriweather', serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: 0.1em;
+      margin: 0 0 14px;
+    }
+    .service-title {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1.0625rem;
+      color: #fff;
+      margin: 0 0 12px;
+    }
+    .service-body {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: #555;
+      margin: 0;
+    }
+
+    /* ── TESTIMONIAL ───────────────────── */
+    .testimonial-card {
+      background: var(--surface-2);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 48px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2D6A4F 0%, #1a3328 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--green-lt);
+      flex-shrink: 0;
+    }
+    .testimonial-quote {
+      font-family: 'Merriweather', serif;
+      font-style: italic;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #bbb;
+      margin: 0 0 36px;
+    }
+    .testimonial-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .t-stat-value {
+      font-family: 'Merriweather', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--green-lt);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .t-stat-label { font-size: 0.8125rem; color: var(--muted); }
+
+    /* ── LOGO BAR ──────────────────────── */
+    .logo-bar {
+      display: flex;
+      gap: 48px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .logo-text {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.14);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* ── FAQ ───────────────────────────── */
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .faq-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      gap: 20px;
+    }
+    .faq-q {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #f0f0f0;
+      margin: 0;
+    }
+    .faq-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #777;
+      font-size: 1rem;
+      line-height: 1;
+      transition: border-color 0.2s, color 0.2s, transform 0.3s;
+    }
+    .faq-a {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--muted);
+      padding-bottom: 24px;
+      margin: 0;
+    }
+
+    /* ── CTA SECTION ───────────────────── */
+    #cta {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 120px 40px 140px;
+    }
+    .cta-glow {
+      position: absolute;
+      bottom: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 500px;
+      background: radial-gradient(ellipse at center,
+        rgba(45,106,79,0.16) 0%,
+        transparent 65%
+      );
+      pointer-events: none;
+    }
+    #cta-content { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+    .cta-headline {
+      font-family: 'Merriweather', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: #fff;
+      margin: 0 0 20px;
+    }
+    .cta-headline em { font-style: italic; color: var(--green-lt); }
+    .cta-sub { font-size: 1rem; color: var(--muted); line-height: 1.75; margin: 0 0 44px; }
+
+    /* ── FOOTER ────────────────────────── */
+    #footer {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 48px 40px;
+    }
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-logo {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #52b788;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
+    .footer-links a {
+      font-size: 0.875rem;
+      color: #444;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { font-size: 0.8125rem; color: rgba(255,255,255,0.18); text-align: center; margin: 0; }
+
+    /* ── FEATURE BOXES ────────────────── */
+    .feat-box {
+      background: var(--surface-2);
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      border-top: 2px solid transparent;
+      transition: border-color 0.25s, background 0.25s;
+    }
+    .feat-box:hover {
+      background: #161616;
+      border-color: var(--green);
+    }
+    .feat-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green-lt);
+    }
+    .feat-title {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: #fff;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .feat-body {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* ── HOW IT WORKS ─────────────────── */
+    .how-steps {
+      display: flex;
+      align-items: stretch;
+    }
+    .how-step {
       flex: 1;
+      position: relative;
+      background: var(--surface-2);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: border-color 0.25s;
+    }
+    .how-step:hover { border-color: rgba(45,106,79,0.3); }
+    @keyframes gradientSweep {
+      0%   { background-position: 0% 0%; }
+      50%  { background-position: 100% 100%; }
+      100% { background-position: 0% 0%; }
+    }
+    .how-step::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(
+        135deg,
+        transparent 15%,
+        rgba(82,183,136,0.18) 45%,
+        rgba(45,106,79,0.13) 65%,
+        transparent 85%
+      );
+      background-size: 250% 250%;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+      animation: gradientSweep 7s ease-in-out infinite paused;
+      pointer-events: none;
+    }
+    .how-step:hover::before {
+      opacity: 1;
+      animation-play-state: running;
+    }
+    .how-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(45,106,79,0.1);
+      border: 1px solid rgba(45,106,79,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green-lt);
+      flex-shrink: 0;
+    }
+    .how-badge {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 0.6875rem;
+      color: var(--green-lt);
+      background: rgba(45,106,79,0.15);
+      border: 1px solid rgba(82,183,136,0.25);
+      border-radius: 100px;
+      padding: 4px 10px;
+      letter-spacing: 0.06em;
+    }
+    .how-connector {
+      flex-shrink: 0;
+      width: 28px;
+      padding-top: 50px;
+    }
+    .how-connector::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, rgba(82,183,136,0.35), rgba(82,183,136,0.1));
+    }
+    .how-title {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1.0625rem;
+      color: #fff;
+      margin: 0;
+      line-height: 1.3;
+    }
+    .how-body {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* ── STAT STRIP ────────────────────── */
+    .stat-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: var(--surface-2);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .stat-strip-item {
+      padding: 48px 32px;
+      text-align: center;
+    }
+    .stat-strip-item + .stat-strip-item {
+      border-left: 1px solid rgba(255,255,255,0.05);
+    }
+    .stat-strip-value {
+      font-family: 'Merriweather', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--green-lt);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .stat-strip-label {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── PLATFORM GRID ─────────────────── */
+    .platform-section {
+      background: #060606;
+      padding: 72px 0;
+    }
+    .platform-grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+    }
+    .platform-item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      position: relative;
-      overflow: visible;
-      min-height: 24px;
+      justify-content: center;
+      gap: 12px;
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+      padding: 28px 32px;
+      min-width: 130px;
     }
-    .pipe-conn::before {
-      content: '';
-      position: absolute;
-      top: 0; bottom: 0;
-      left: 50%;
-      width: 1.5px;
-      transform: translateX(-50%);
-      background: repeating-linear-gradient(
-        to bottom,
-        rgba(45,106,79,0.25) 0px, rgba(45,106,79,0.25) 3px,
-        transparent 3px, transparent 7px
-      );
+    .platform-mark {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.01em;
     }
-    .pipe-arrow {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #2D6A4F;
-      font-size: 10px;
-      line-height: 1;
-      opacity: 0.5;
-      z-index: 2;
+    .platform-name {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.22);
     }
-    .pipe-glow {
-      position: absolute;
-      top: 0; bottom: 0;
-      left: 50%;
-      width: 2.5px;
-      transform: translateX(-50%);
-      background: #2D6A4F;
+
+    /* ── FADE UP ───────────────────────── */
+    .fade-up {
       opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
     }
-    .pipe-pulse {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #52b788;
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
-      opacity: 0;
-    }
-    @keyframes nodeFlash {
-      0%, 100% { background: #161616; border-color: rgba(45,106,79,0.4); border-width: 1.5px; }
-      4%       { background: #1a3328; border-color: #2D6A4F; border-width: 2.5px; }
-      22%      { background: #161616; border-color: rgba(45,106,79,0.4); border-width: 1.5px; }
-    }
-    @keyframes glowFlash {
-      0%, 10%, 100% { opacity: 0; }
-      5%            { opacity: 1; }
-    }
-    @keyframes pulseDot {
-      0%   { top: 0%;   opacity: 0; }
-      1%   { top: 0%;   opacity: 1; }
-      9%   { top: 100%; opacity: 1; }
-      10%  { top: 100%; opacity: 0; }
-      100% { top: 100%; opacity: 0; }
-    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
   </style>
-  <section class="fade-in" style="background-color: #0F0F0F; padding: 80px 40px;">
-    <div style="max-width: 1200px; margin: 0 auto;">
+</head>
 
-      <p class="label-accent uppercase tracking-widest text-center" style="margin-bottom: 3.5rem;">What Rulexo does for you</p>
+<body>
 
-      <div class="combo-grid">
+  <!-- ═══ NAV ═══════════════════════════════════════════════════════ -->
+  <nav id="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">RULEXO</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Start free audit</a>
+    </div>
+  </nav>
 
-        <!-- LEFT: Before phone -->
-        <div class="combo-col-phone">
-          <p class="text-xs font-bold uppercase text-center" style="color:#888888; font-family:'Lato',sans-serif; letter-spacing:0.1em; margin-bottom:1rem;">Tom's evening without Rulexo</p>
-          <div style="background:#0a0a0a; border:2px solid rgba(255,255,255,0.1); border-radius:26px; padding:16px 12px 22px; width:220px; height:420px; overflow:hidden; box-sizing:border-box;">
-            <div style="display:flex; justify-content:space-between; margin-bottom:12px; opacity:0.3;">
-              <span style="font-size:9px; color:#888; font-family:'Lato',sans-serif;">21:47</span>
-              <span style="font-size:8px; color:#888; letter-spacing:2px;">▮▮▮</span>
-            </div>
-            <div style="background:#1c1c1e; border-radius:9px; padding:8px 10px; margin-bottom:5px; border-left:3px solid #25d366;">
-              <div style="font-size:8px; color:#555; font-family:'Lato',sans-serif; margin-bottom:2px;">WhatsApp · now</div>
-              <div style="font-size:9px; color:#999; font-family:'Lato',sans-serif;">Dave: "Can you quote the back garden?"</div>
-            </div>
-            <div style="background:#1c1c1e; border-radius:9px; padding:8px 10px; margin-bottom:5px; margin-top:-4px; border-left:3px solid #e05252; position:relative; z-index:1;">
-              <div style="font-size:8px; color:#555; font-family:'Lato',sans-serif; margin-bottom:2px;">Missed calls · 19:32</div>
-              <div style="font-size:9px; color:#999; font-family:'Lato',sans-serif;">07712 834 901 — 2 missed</div>
-            </div>
-            <div style="background:#1c1c1e; border-radius:9px; padding:8px 10px; margin-bottom:5px; border-left:3px solid #25d366;">
-              <div style="font-size:8px; color:#555; font-family:'Lato',sans-serif; margin-bottom:2px;">WhatsApp · 18:51</div>
-              <div style="font-size:9px; color:#999; font-family:'Lato',sans-serif;">Sarah: "Just checking if you got my message..."</div>
-            </div>
-            <div style="background:#1c1c1e; border-radius:9px; padding:8px 10px; margin-top:-4px; border-left:3px solid #444; position:relative; z-index:1;">
-              <div style="font-size:8px; color:#555; font-family:'Lato',sans-serif; margin-bottom:3px;">Reminders</div>
-              <div style="font-size:9px; color:#777; font-family:'Lato',sans-serif; line-height:1.7;">&#9744; Reply to Mike<br/>&#9744; Send Johnson invoice<br/>&#9744; Follow up — Ash St garden</div>
-            </div>
-          </div>
-        </div>
+  <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <canvas id="hero-noise"></canvas>
+    <canvas id="hero-canvas"></canvas>
+    <div id="hero-content">
 
-        <!-- CENTRE: Vertical pipeline -->
-        <div class="combo-col-pipe">
-          <p style="visibility:hidden; font-size:0.75rem; margin-bottom:1rem; font-family:'Lato',sans-serif;" aria-hidden="true">placeholder</p>
-          <div class="pipe-nodes">
-
-            <div class="pipe-node" style="animation: nodeFlash 5s ease 0s infinite;">Customer enquiry</div>
-
-            <div class="pipe-conn">
-              <div class="pipe-glow"  style="animation: glowFlash 5s linear 0s infinite;"></div>
-              <div class="pipe-pulse" style="animation: pulseDot  5s linear 0s infinite;"></div>
-              <div class="pipe-arrow">&#9660;</div>
-            </div>
-
-            <div class="pipe-node" style="animation: nodeFlash 5s ease 0.5s infinite;">Rulexo captures it</div>
-
-            <div class="pipe-conn">
-              <div class="pipe-glow"  style="animation: glowFlash 5s linear 0.5s infinite;"></div>
-              <div class="pipe-pulse" style="animation: pulseDot  5s linear 0.5s infinite;"></div>
-              <div class="pipe-arrow">&#9660;</div>
-            </div>
-
-            <div class="pipe-node" style="animation: nodeFlash 5s ease 1s infinite;">Quote generated</div>
-
-            <div class="pipe-conn">
-              <div class="pipe-glow"  style="animation: glowFlash 5s linear 1s infinite;"></div>
-              <div class="pipe-pulse" style="animation: pulseDot  5s linear 1s infinite;"></div>
-              <div class="pipe-arrow">&#9660;</div>
-            </div>
-
-            <div class="pipe-node" style="animation: nodeFlash 5s ease 1.5s infinite;">Sent to customer</div>
-
-            <div class="pipe-conn">
-              <div class="pipe-glow"  style="animation: glowFlash 5s linear 1.5s infinite;"></div>
-              <div class="pipe-pulse" style="animation: pulseDot  5s linear 1.5s infinite;"></div>
-              <div class="pipe-arrow">&#9660;</div>
-            </div>
-
-            <div class="pipe-node" style="animation: nodeFlash 5s ease 2s infinite;">Follow-up scheduled</div>
-
-          </div>
-        </div>
-
-        <!-- RIGHT: After phone -->
-        <div class="combo-col-phone">
-          <p class="text-xs font-bold uppercase text-center" style="color:#2D6A4F; font-family:'Lato',sans-serif; letter-spacing:0.1em; margin-bottom:1rem;">Tom's evening with Rulexo</p>
-          <div style="background:#0a0a0a; border:2px solid rgba(45,106,79,0.4); border-radius:26px; padding:16px 12px 22px; width:220px; height:420px; overflow:hidden; box-sizing:border-box;">
-            <div style="display:flex; justify-content:space-between; margin-bottom:12px; opacity:0.3;">
-              <span style="font-size:9px; color:#888; font-family:'Lato',sans-serif;">21:47</span>
-              <span style="font-size:8px; color:#888; letter-spacing:2px;">▮▮▮</span>
-            </div>
-            <div style="background:#0c2218; border-radius:9px; padding:12px 13px; border:1px solid rgba(45,106,79,0.45); margin-bottom:10px;">
-              <div style="font-size:8px; color:#4ade80; font-family:'Lato',sans-serif; font-weight:700; letter-spacing:0.08em; margin-bottom:7px;">RULEXO · just now</div>
-              <div style="font-size:9px; color:#cccccc; font-family:'Lato',sans-serif; line-height:1.8;">3 enquiries handled.<br/>2 garden quotes sent automatically.<br/>Follow-ups scheduled.</div>
-            </div>
-            <div style="text-align:center; padding-top:12px;">
-              <div style="font-size:9px; color:rgba(255,255,255,0.18); font-family:'Lato',sans-serif;">No other notifications</div>
-            </div>
-          </div>
-        </div>
-
+      <!-- Small icon ring -->
+      <div class="hero-icon">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 2L13.5 8.5H20L14.5 12.5L16.5 19L11 15L5.5 19L7.5 12.5L2 8.5H8.5L11 2Z"
+                stroke="#52b788" stroke-width="1.2" stroke-linejoin="round"/>
+        </svg>
       </div>
 
-      <!-- CTA -->
-      <div class="text-center" style="margin-top:3.5rem;">
-        <p style="color:#888888; font-family:'Lato',sans-serif; margin-bottom:1.5rem;">Your system works while you switch off.</p>
-        <a href="contact.html" class="btn-accent inline-block px-8 py-4 rounded-md text-sm">Start your free audit</a>
+      <!-- Badge -->
+      <div style="margin-bottom: 36px;">
+        <span class="hero-badge">
+          <span class="badge-dot"></span>
+          AI Systems for UK Trade Businesses
+        </span>
       </div>
 
+      <!-- Headline -->
+      <h1 id="hero-headline" class="hero-headline">
+        Automate Smarter.<br>Win More Jobs.
+        <span class="hero-rotating" aria-live="polite">
+          <span class="hero-word">With AI.</span>
+          <span class="hero-word">On Autopilot.</span>
+          <span class="hero-word">Effortlessly.</span>
+          <span class="hero-word">24/7.</span>
+          <span class="hero-word">In Minutes.</span>
+        </span>
+      </h1>
+
+      <!-- Sub -->
+      <p class="hero-sub">
+        The job ends when you leave site. With Rulexo, the admin does too.
+      </p>
+
+      <!-- CTAs -->
+      <div class="hero-actions">
+        <a id="hero-cta-primary" href="contact.html" class="btn-primary">
+          Start your free audit
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a id="hero-cta-secondary" href="services.html" class="btn-outline">
+          See what we build
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- Trust block -->
-  <section class="max-w-5xl mx-auto px-6 pb-32 text-center">
-    <hr class="rule-accent mb-16" />
-    <div class="max-w-2xl mx-auto fade-in">
-      <p class="text-2xl md:text-3xl font-bold leading-snug text-white" style="font-family: 'Merriweather', serif;">
-        "We know what it's like to get home exhausted and still have two hours of work waiting for you. That's exactly why Rulexo exists."
-      </p>
+  <!-- ═══ HOW IT WORKS ════════════════════════════════════════════════ -->
+  <section style="background: var(--surface); padding: 80px 0;">
+    <div class="container">
+      <div class="fade-up" style="margin-bottom: 52px;">
+        <span class="section-label">How it works</span>
+      </div>
+      <div class="how-steps">
+
+        <div class="how-step fade-up">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+            <div class="how-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.63 12 19.79 19.79 0 0 1 1.56 3.35 2 2 0 0 1 3.53 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <span class="how-badge">01</span>
+          </div>
+          <h3 class="how-title">One free call</h3>
+          <p class="how-body">Tell us what work you're taking home. We'll find exactly what can be handed off and show you what that looks like for your business.</p>
+        </div>
+
+        <div class="how-connector" aria-hidden="true"></div>
+
+        <div class="how-step fade-up" style="transition-delay: 0.1s;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+            <div class="how-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <span class="how-badge">02</span>
+          </div>
+          <h3 class="how-title">We build your system</h3>
+          <p class="how-body">Custom to your trade, your customers, and the way you work. Ready in days.</p>
+        </div>
+
+        <div class="how-connector" aria-hidden="true"></div>
+
+        <div class="how-step fade-up" style="transition-delay: 0.2s;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+            <div class="how-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </div>
+            <span class="how-badge">03</span>
+          </div>
+          <h3 class="how-title">You get your evenings back</h3>
+          <p class="how-body">Enquiries handled. Quotes sent. Follow-ups done. You finish the job and actually switch off.</p>
+        </div>
+
+      </div>
     </div>
-    <div class="mt-10 fade-in">
-      <a href="contact.html" class="btn-accent inline-block px-8 py-4 rounded-md text-sm">
+  </section>
+
+  <!-- ═══ PROBLEM ════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="split-grid">
+
+        <div class="fade-up">
+          <span class="section-label">The problem</span>
+          <h2 class="section-heading" style="font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 24px;">
+            Every evening you spend on admin is an evening you're <em>not switching off.</em>
+          </h2>
+          <p style="font-size: 1rem; line-height: 1.8; color: #555; margin-bottom: 36px;">
+            Quotes, follow-ups, invoices, scheduling. It adds up to hours of work that follows you home, eats into your evenings, and pulls your focus away from actually growing your business.
+          </p>
+          <a href="contact.html" class="btn-primary">
+            Get your free audit
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="fade-up" style="transition-delay: 0.15s;">
+          <div class="pipeline" id="pipeline">
+            <div class="pipe-step" data-pipe-step="0">
+              <span class="pipe-dot"></span>
+              <span>Customer enquiry received</span>
+            </div>
+            <div class="pipe-conn" data-pipe-conn="0">↓</div>
+            <div class="pipe-step" data-pipe-step="1">
+              <span class="pipe-dot"></span>
+              <span>Rulexo captures &amp; qualifies it</span>
+            </div>
+            <div class="pipe-conn" data-pipe-conn="1">↓</div>
+            <div class="pipe-step" data-pipe-step="2">
+              <span class="pipe-dot"></span>
+              <span>Professional quote generated</span>
+            </div>
+            <div class="pipe-conn" data-pipe-conn="2">↓</div>
+            <div class="pipe-step" data-pipe-step="3">
+              <span class="pipe-dot"></span>
+              <span>Sent to customer within minutes</span>
+            </div>
+            <div class="pipe-conn" data-pipe-conn="3">↓</div>
+            <div class="pipe-step" data-pipe-step="4">
+              <span class="pipe-dot"></span>
+              <span>Follow-up scheduled automatically</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES ═══════════════════════════════════════════════════ -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 56px;" class="fade-up">
+        <span class="section-label">What we build</span>
+        <h2 class="section-heading" style="font-size: clamp(1.75rem, 3vw, 2.5rem);">
+          AI systems. Built to run your business <em>while you run the job.</em>
+        </h2>
+        <p style="margin: 20px auto 0; font-size: 1rem; line-height: 1.75; color: var(--muted); max-width: 540px;">
+          Every enquiry from Bark, Checkatrade, Facebook, and your website lands directly into your system. From there, everything below runs automatically.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card fade-up">
+          <div style="width:44px;height:44px;background:rgba(45,106,79,0.15);border:1px solid rgba(45,106,79,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+            </svg>
+          </div>
+          <p class="service-num">01</p>
+          <h3 class="service-title">Quote Generation</h3>
+          <p class="service-body">Accurate, professional quotes sent within minutes of an enquiry, while you're still on site with another customer.</p>
+        </div>
+
+        <div class="service-card fade-up" style="transition-delay: 0.1s;">
+          <div style="width:44px;height:44px;background:rgba(45,106,79,0.1);border:1px solid rgba(45,106,79,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+            </svg>
+          </div>
+          <p class="service-num">02</p>
+          <h3 class="service-title">Follow-up Automation</h3>
+          <p class="service-body">Personalised follow-ups to every prospect, every time. Sent in your voice, automatically.</p>
+        </div>
+
+        <div class="service-card fade-up" style="transition-delay: 0.15s;">
+          <div style="width:44px;height:44px;background:rgba(45,106,79,0.1);border:1px solid rgba(45,106,79,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+            </svg>
+          </div>
+          <p class="service-num">03</p>
+          <h3 class="service-title">Admin Automation</h3>
+          <p class="service-body">Scheduling, invoice reminders, job confirmations. Handled without you lifting a finger. Evenings reclaimed.</p>
+        </div>
+
+        <div class="service-card fade-up" style="transition-delay: 0.2s;">
+          <div style="width:44px;height:44px;background:rgba(45,106,79,0.1);border:1px solid rgba(45,106,79,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 1 8.835-2.535m0 0A23.74 23.74 0 0 1 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m-1.394 0a23.85 23.85 0 0 0-8.835-2.535" />
+            </svg>
+          </div>
+          <p class="service-num">04</p>
+          <h3 class="service-title">Social &amp; Content</h3>
+          <p class="service-body">Posts from your completed jobs, scheduled automatically. Stay visible to local customers without extra effort.</p>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;" class="fade-up">
+        <a href="services.html" class="btn-outline">View all services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ STAT STRIP ════════════════════════════════════════════════ -->
+  <section class="section" style="background: #060606; padding: 72px 0;">
+    <div class="container">
+      <div class="stat-strip fade-up">
+        <div class="stat-strip-item">
+          <div class="stat-strip-value">2 hrs</div>
+          <div class="stat-strip-label">saved every evening</div>
+        </div>
+        <div class="stat-strip-item">
+          <div class="stat-strip-value">+1</div>
+          <div class="stat-strip-label">extra job per week on average</div>
+        </div>
+        <div class="stat-strip-item">
+          <div class="stat-strip-value">Days</div>
+          <div class="stat-strip-label">not weeks to get running</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PLATFORM SECTION ════════════════════════════════════════════ -->
+  <section class="platform-section">
+    <div class="container">
+      <div class="fade-up" style="text-align: center; margin-bottom: 44px;">
+        <span class="section-label">Integrations</span>
+        <h2 class="section-heading" style="font-size: clamp(1.5rem, 2.5vw, 2rem);">
+          We connect directly to where<br>your leads come from
+        </h2>
+      </div>
+      <div class="platform-grid fade-up" style="transition-delay: 0.1s;">
+
+        <div class="platform-item">
+          <div class="platform-mark">f</div>
+          <div class="platform-name">Facebook</div>
+        </div>
+
+        <div class="platform-item">
+          <div class="platform-mark">G</div>
+          <div class="platform-name">Google Business</div>
+        </div>
+
+        <div class="platform-item">
+          <div class="platform-mark">✓</div>
+          <div class="platform-name">Checkatrade</div>
+        </div>
+
+        <div class="platform-item">
+          <div class="platform-mark">B.</div>
+          <div class="platform-name">Bark.com</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ══════════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 56px;" class="fade-up">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-heading" style="font-size: clamp(1.75rem, 3vw, 2.5rem);">
+          Frequently asked <em>questions</em>
+        </h2>
+      </div>
+
+      <div class="faq-list fade-up" x-data="{ open: null }">
+
+        <div class="faq-item">
+          <button class="faq-btn" @click="open = open === 1 ? null : 1">
+            <span class="faq-q">Do I need to be tech-savvy to use Rulexo?</span>
+            <span class="faq-icon" :style="open === 1 ? 'border-color:#2D6A4F;color:#52b788;transform:rotate(45deg)' : ''">+</span>
+          </button>
+          <p class="faq-a" x-show="open === 1" x-transition style="display:none;">
+            Not at all. We handle everything: setup, integrations, testing. You tell us about your business and we build it. Once it's running, it needs no maintenance on your end.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" @click="open = open === 2 ? null : 2">
+            <span class="faq-q">How long does it take to get set up?</span>
+            <span class="faq-icon" :style="open === 2 ? 'border-color:#2D6A4F;color:#52b788;transform:rotate(45deg)' : ''">+</span>
+          </button>
+          <p class="faq-a" x-show="open === 2" x-transition style="display:none;">
+            Most systems are live within 7–10 working days. We'll update you throughout and run a full test phase before anything goes live with your customers.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" @click="open = open === 3 ? null : 3">
+            <span class="faq-q">What trade types do you work with?</span>
+            <span class="faq-icon" :style="open === 3 ? 'border-color:#2D6A4F;color:#52b788;transform:rotate(45deg)' : ''">+</span>
+          </button>
+          <p class="faq-a" x-show="open === 3" x-transition style="display:none;">
+            Builders, plumbers, electricians, landscapers, roofers, decorators, joiners. Any UK trade business dealing with enquiries, quoting, and scheduling. If it's a trade, we can automate it.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" @click="open = open === 4 ? null : 4">
+            <span class="faq-q">Is there a contract or minimum term?</span>
+            <span class="faq-icon" :style="open === 4 ? 'border-color:#2D6A4F;color:#52b788;transform:rotate(45deg)' : ''">+</span>
+          </button>
+          <p class="faq-a" x-show="open === 4" x-transition style="display:none;">
+            We'll be transparent about pricing on your free audit call. We believe in earning your business every month. No lock-ins, no hidden fees.
+          </p>
+        </div>
+
+        <div class="faq-item" style="border-bottom: none;">
+          <button class="faq-btn" @click="open = open === 5 ? null : 5">
+            <span class="faq-q">What if it doesn't work for my business?</span>
+            <span class="faq-icon" :style="open === 5 ? 'border-color:#2D6A4F;color:#52b788;transform:rotate(45deg)' : ''">+</span>
+          </button>
+          <p class="faq-a" x-show="open === 5" x-transition style="display:none;">
+            That's exactly what the free audit is for. We'll tell you honestly whether automation will make a meaningful difference for your specific business. If it won't, we'll say so.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ════════════════════════════════════════════════════════ -->
+  <section id="cta">
+    <div class="cta-glow"></div>
+    <div id="cta-content" class="fade-up">
+      <span class="section-label" style="display: block; margin-bottom: 20px;">Get started</span>
+      <h2 class="cta-headline">
+        Still doing it all yourself?<br><em>Let's change that.</em>
+      </h2>
+      <p class="cta-sub">
+        Book a free 20-minute call. We'll find exactly where you're losing time and show you what running on autopilot actually looks like for your business.
+      </p>
+      <a id="cta-btn" href="contact.html" class="btn-primary" style="font-size: 1rem; padding: 16px 36px;">
         Start your free audit
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </a>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="border-t py-8 px-6" style="border-color: rgba(255,255,255,0.06);">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-      <span class="font-bold text-white" style="font-family: 'Merriweather', serif;">rulexo</span>
-      <div class="flex gap-6">
-        <span>rulexo.co.uk</span>
-        <a href="mailto:aheyes1992@gmail.com" class="hover:text-white transition-colors duration-200">aheyes1992@gmail.com</a>
+  <!-- ═══ FOOTER ══════════════════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-row">
+        <a href="index.html" class="footer-logo">RULEXO</a>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="footer-links">
+          <a href="mailto:Adam@rulexo.com">Adam@rulexo.com</a>
+          <span style="color: rgba(255,255,255,0.15); font-size: 0.8125rem;">rulexo.com</span>
+        </div>
       </div>
+      <div class="divider"></div>
+      <p class="footer-copy">© 2025 Rulexo. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.12 });
+  <!-- ═══ SCRIPTS ══════════════════════════════════════════════════════ -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  <!-- Canvas beam animation -->
+  <script>
+  (function () {
+    const canvas   = document.getElementById('hero-canvas');
+    const noiseEl  = document.getElementById('hero-noise');
+    const section  = document.getElementById('hero');
+    const ctx      = canvas.getContext('2d');
+    const nCtx     = noiseEl.getContext('2d');
+
+    const LAYERS         = 3;
+    const BEAMS_PER_LAYER = 8;
+    let beams = [];
+    let raf;
+
+    function createBeam(w, h, layer) {
+      return {
+        x:          Math.random() * w,
+        y:          Math.random() * h,
+        width:      10 + layer * 5,
+        length:     h * 2.5,
+        angle:      -35 + Math.random() * 10,
+        speed:      0.2 + layer * 0.2 + Math.random() * 0.2,
+        opacity:    0.08 + layer * 0.05 + Math.random() * 0.1,
+        pulse:      Math.random() * Math.PI * 2,
+        pulseSpeed: 0.01 + Math.random() * 0.015,
+        layer,
+      };
+    }
+
+    function resize() {
+      const dpr = window.devicePixelRatio || 1;
+      const w   = section.offsetWidth;
+      const h   = section.offsetHeight;
+
+      [canvas, noiseEl].forEach(el => {
+        el.width        = w * dpr;
+        el.height       = h * dpr;
+        el.style.width  = w + 'px';
+        el.style.height = h + 'px';
+      });
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      nCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      beams = [];
+      for (let layer = 1; layer <= LAYERS; layer++) {
+        for (let i = 0; i < BEAMS_PER_LAYER; i++) {
+          beams.push(createBeam(w, h, layer));
+        }
+      }
+    }
+
+    function drawNoise(w, h) {
+      const img = nCtx.createImageData(noiseEl.width, noiseEl.height);
+      for (let i = 0; i < img.data.length; i += 4) {
+        const v = Math.random() * 255;
+        img.data[i] = img.data[i+1] = img.data[i+2] = v;
+        img.data[i+3] = 12;
+      }
+      nCtx.putImageData(img, 0, 0);
+    }
+
+    function drawBeam(beam, h) {
+      ctx.save();
+      ctx.translate(beam.x, beam.y);
+      ctx.rotate(beam.angle * Math.PI / 180);
+
+      const op  = Math.min(1, beam.opacity * (0.8 + Math.sin(beam.pulse) * 0.4));
+      const g   = ctx.createLinearGradient(0, 0, 0, beam.length);
+      g.addColorStop(0,   `rgba(82,183,136,0)`);
+      g.addColorStop(0.2, `rgba(82,183,136,${op * 0.5})`);
+      g.addColorStop(0.5, `rgba(82,183,136,${op})`);
+      g.addColorStop(0.8, `rgba(82,183,136,${op * 0.5})`);
+      g.addColorStop(1,   `rgba(82,183,136,0)`);
+
+      ctx.fillStyle = g;
+      ctx.filter    = `blur(${2 + beam.layer * 2}px)`;
+      ctx.fillRect(-beam.width / 2, 0, beam.width, beam.length);
+      ctx.restore();
+    }
+
+    function animate() {
+      const w = section.offsetWidth;
+      const h = section.offsetHeight;
+
+      const bg = ctx.createLinearGradient(0, 0, 0, h);
+      bg.addColorStop(0, '#080808');
+      bg.addColorStop(1, '#0e0e0e');
+      ctx.fillStyle = bg;
+      ctx.fillRect(0, 0, w, h);
+
+      beams.forEach(beam => {
+        beam.y     -= beam.speed * (beam.layer / LAYERS + 0.5);
+        beam.pulse += beam.pulseSpeed;
+        if (beam.y + beam.length < -50) {
+          beam.y = h + 50;
+          beam.x = Math.random() * w;
+        }
+        drawBeam(beam, h);
+      });
+
+      drawNoise(w, h);
+      raf = requestAnimationFrame(animate);
+    }
+
+    resize();
+    window.addEventListener('resize', resize);
+    animate();
+  })();
+  </script>
+
+  <!-- Pipeline step animation -->
+  <script>
+  (function () {
+    const steps = document.querySelectorAll('[data-pipe-step]');
+    const conns = document.querySelectorAll('[data-pipe-conn]');
+    if (!steps.length) return;
+
+    let idx = 0;
+
+    function tick() {
+      // clear all
+      steps.forEach(s => s.classList.remove('pipe-active'));
+      conns.forEach(c => c.classList.remove('pipe-conn-active'));
+
+      // highlight current step
+      steps[idx].classList.add('pipe-active');
+
+      // light the connector leading INTO the next step (same index)
+      if (conns[idx]) conns[idx].classList.add('pipe-conn-active');
+
+      idx = (idx + 1) % steps.length;
+    }
+
+    tick();
+    setInterval(tick, 900);
+  })();
+  </script>
+
+  <!-- Rotating headline words -->
+  <script>
+  (function () {
+    const words = Array.from(document.querySelectorAll('.hero-word'));
+    if (!words.length) return;
+    let current = 0;
+    words[current].classList.add('active');
+
+    setInterval(() => {
+      const prev = current;
+      current    = (current + 1) % words.length;
+
+      words[prev].classList.remove('active');
+      words[prev].classList.add('exit');
+      words[current].classList.add('active');
+
+      setTimeout(() => words[prev].classList.remove('exit'), 450);
+    }, 2600);
+  })();
+  </script>
+
+  <!-- Scroll-triggered fade-ups -->
+  <script>
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
   </script>
 
 </body>

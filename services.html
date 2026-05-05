@@ -8,14 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="antialiased">
+<div style="max-width: 960px; margin: 0 auto;">
 
   <!-- Nav -->
   <nav class="w-full px-6 py-5 flex items-center justify-between max-w-5xl mx-auto">
-    <a href="index.html" class="font-bold text-xl tracking-tight text-white" style="font-family: 'Merriweather', serif;">rulexo</a>
+    <a href="index.html" class="font-bold tracking-widest" style="font-family: 'Merriweather', serif; font-size: 1.5rem; color: #52b788; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none;">RULEXO</a>
     <ul class="flex gap-8 text-sm">
       <li><a href="index.html" class="nav-link">Home</a></li>
       <li><a href="services.html" class="nav-link active">Services</a></li>
@@ -24,82 +26,117 @@
   </nav>
 
   <!-- Page header -->
-  <section class="max-w-5xl mx-auto px-6 pt-20 pb-16">
+  <section class="px-6 pt-20 pb-16 text-center">
     <p class="label-accent uppercase mb-6 tracking-widest">What we build</p>
-    <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight max-w-2xl" style="font-family: 'Merriweather', serif;">
+    <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mx-auto" style="font-family: 'Merriweather', serif; max-width: 600px;">
       What we build for you
     </h1>
-    <p class="mt-6 text-base leading-relaxed max-w-xl" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-      Every system is custom-built around your trade. No templates, no one-size-fits-all. Here's what we typically put in place.
+    <p class="mt-6 text-base leading-relaxed mx-auto" style="color: var(--muted); font-family: 'Lato', sans-serif; max-width: 480px;">
+      Every system is custom-built around your trade. Because no two businesses run the same way, and neither should their automation.
     </p>
   </section>
 
+  <!-- Intro -->
+  <div class="max-w-5xl mx-auto px-6 pb-10">
+    <p style="font-size: 1rem; line-height: 1.75; color: var(--muted); font-family: 'Lato', sans-serif; max-width: 600px;">
+      Every enquiry from Bark, Checkatrade, Facebook, and your website lands directly into your system. From there, everything below runs automatically.
+    </p>
+  </div>
+
   <!-- Service cards -->
-  <section class="max-w-5xl mx-auto px-6 pb-24">
+  <section class="max-w-5xl mx-auto px-6 pb-0">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-      <div class="card fade-in rounded-xl p-8">
+      <!-- Quote Generation — featured with green tint -->
+      <div class="card fade-in rounded-xl p-8" style="background: rgba(45,106,79,0.08);">
+        <div style="width:44px;height:44px;background:rgba(45,106,79,0.15);border:1px solid rgba(45,106,79,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+          </svg>
+        </div>
         <div class="flex items-center gap-3 mb-5">
           <span class="label-accent text-base">01</span>
           <h2 class="text-white font-bold text-xl" style="font-family: 'Merriweather', serif;">Quote Generation</h2>
         </div>
         <p class="text-sm leading-relaxed mb-4" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-          <strong class="text-white">What it does:</strong> Automatically produces accurate, professional quotes from the information a customer provides — sent within minutes, not days.
+          <strong style="color:#2D6A4F;">What it does:</strong> Automatically produces accurate, professional quotes from the information a customer provides, sent within minutes, not days.
         </p>
         <p class="text-sm leading-relaxed" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-          <strong class="text-white">What it solves:</strong> Stops you losing jobs to competitors who respond faster while you're on site.
+          <strong style="color:#2D6A4F;">What it solves:</strong> Stops you losing jobs to competitors who respond faster while you're on site.
         </p>
       </div>
 
       <div class="card fade-in rounded-xl p-8" style="transition-delay: 0.1s;">
+        <div style="width:44px;height:44px;background:rgba(45,106,79,0.1);border:1px solid rgba(45,106,79,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+          </svg>
+        </div>
         <div class="flex items-center gap-3 mb-5">
           <span class="label-accent text-base">02</span>
           <h2 class="text-white font-bold text-xl" style="font-family: 'Merriweather', serif;">Follow-up Automation</h2>
         </div>
         <p class="text-sm leading-relaxed mb-4" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-          <strong class="text-white">What it does:</strong> Sends timely, personalised follow-up messages to every prospect who hasn't responded — automatically, in your voice.
+          <strong style="color:#2D6A4F;">What it does:</strong> Personalised follow-ups to every prospect, every time. Sent in your voice, automatically.
         </p>
         <p class="text-sm leading-relaxed" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-          <strong class="text-white">What it solves:</strong> Recovers jobs that would have gone cold because life got busy and you forgot to chase.
+          <strong style="color:#2D6A4F;">What it solves:</strong> Recovers jobs that would have gone cold because life got busy and you forgot to chase.
         </p>
       </div>
 
       <div class="card fade-in rounded-xl p-8" style="transition-delay: 0.15s;">
+        <div style="width:44px;height:44px;background:rgba(45,106,79,0.1);border:1px solid rgba(45,106,79,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+          </svg>
+        </div>
         <div class="flex items-center gap-3 mb-5">
           <span class="label-accent text-base">03</span>
           <h2 class="text-white font-bold text-xl" style="font-family: 'Merriweather', serif;">Admin Automation</h2>
         </div>
         <p class="text-sm leading-relaxed mb-4" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-          <strong class="text-white">What it does:</strong> Handles scheduling, invoice reminders, and job confirmations without you lifting a finger.
+          <strong style="color:#2D6A4F;">What it does:</strong> Handles scheduling, invoice reminders, and job confirmations without you lifting a finger.
         </p>
         <p class="text-sm leading-relaxed" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-          <strong class="text-white">What it solves:</strong> Eliminates the two hours of paperwork that follow you home every evening.
+          <strong style="color:#2D6A4F;">What it solves:</strong> Eliminates the two hours of paperwork that follow you home every evening.
         </p>
       </div>
 
       <div class="card fade-in rounded-xl p-8" style="transition-delay: 0.2s;">
+        <div style="width:44px;height:44px;background:rgba(45,106,79,0.1);border:1px solid rgba(45,106,79,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 1 8.835-2.535m0 0A23.74 23.74 0 0 1 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m-1.394 0a23.85 23.85 0 0 0-8.835-2.535" />
+          </svg>
+        </div>
         <div class="flex items-center gap-3 mb-5">
           <span class="label-accent text-base">04</span>
           <h2 class="text-white font-bold text-xl" style="font-family: 'Merriweather', serif;">Social &amp; Content</h2>
         </div>
         <p class="text-sm leading-relaxed mb-4" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-          <strong class="text-white">What it does:</strong> Generates and schedules social media posts from your completed jobs, keeping your online presence active without extra effort.
+          <strong style="color:#2D6A4F;">What it does:</strong> Generates and schedules social media posts from your completed jobs, keeping your online presence active without extra effort.
         </p>
         <p class="text-sm leading-relaxed" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-          <strong class="text-white">What it solves:</strong> Keeps you visible to local customers even when you're too busy to think about marketing.
+          <strong style="color:#2D6A4F;">What it solves:</strong> Keeps you visible to local customers even when you're too busy to think about marketing.
         </p>
       </div>
 
     </div>
   </section>
 
+  <!-- Statement -->
+  <div class="max-w-5xl mx-auto px-6" style="padding-top: 80px; padding-bottom: 64px; text-align: center;">
+    <p style="font-size: 1.125rem; line-height: 1.85; color: #888; max-width: 580px; margin: 0 auto; font-family: 'Merriweather', serif; font-style: italic;">
+      The first business to respond wins the job most of the time. Our clients respond within minutes, automatically, day or night.
+    </p>
+  </div>
+
   <!-- Pricing line -->
   <section class="max-w-5xl mx-auto px-6 pb-28">
     <hr class="rule-accent mb-14" />
     <div class="max-w-xl fade-in">
-      <p class="text-white text-xl font-bold mb-3" style="font-family: 'Merriweather', serif;">Done-for-you pricing.</p>
+      <p class="text-white text-xl font-bold mb-3" style="font-family: 'Merriweather', serif;">Priced around what you actually need.</p>
       <p class="text-sm leading-relaxed mb-8" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-        We'll scope the right system for your business on a quick call. No lengthy proposals, no hidden costs — just a clear plan and a fair price.
+        Every business is different so every quote is different. We scope exactly what needs automating on your free call, then give you a clear setup cost and a simple monthly fee. No guesswork, no surprises.
       </p>
       <a href="contact.html" class="btn-accent inline-block px-8 py-4 rounded-md text-sm">
         Start your free audit
@@ -110,14 +147,16 @@
   <!-- Footer -->
   <footer class="border-t py-8 px-6" style="border-color: rgba(255,255,255,0.06);">
     <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-      <span class="font-bold text-white" style="font-family: 'Merriweather', serif;">rulexo</span>
+      <span class="font-bold" style="font-family: 'Merriweather', serif; color: #52b788; text-transform: uppercase; letter-spacing: 0.06em;">RULEXO</span>
       <div class="flex gap-6">
-        <span>rulexo.co.uk</span>
-        <a href="mailto:aheyes1992@gmail.com" class="hover:text-white transition-colors duration-200">aheyes1992@gmail.com</a>
+        <span>rulexo.com</span>
+        <a href="mailto:Adam@rulexo.com" class="hover:text-white transition-colors duration-200">Adam@rulexo.com</a>
       </div>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -130,5 +169,6 @@
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 
+</div>
 </body>
 </html>

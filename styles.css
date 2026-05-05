@@ -45,8 +45,37 @@ body {
 
 /* Card surface */
 .card {
+  position: relative;
   background-color: var(--surface);
   border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 3px solid #2D6A4F;
+}
+@keyframes gradientSweep {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    transparent 15%,
+    rgba(82,183,136,0.18) 45%,
+    rgba(45,106,79,0.13) 65%,
+    transparent 85%
+  );
+  background-size: 250% 250%;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  animation: gradientSweep 7s ease-in-out infinite paused;
+  pointer-events: none;
+}
+.card:hover::before {
+  opacity: 1;
+  animation-play-state: running;
 }
 
 /* Nav link hover */
@@ -64,7 +93,7 @@ body {
 
 /* Accent label */
 .label-accent {
-  color: var(--accent);
+  color: #2D6A4F;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -73,7 +102,7 @@ body {
 
 /* Step number */
 .step-number {
-  color: var(--accent);
+  color: #2D6A4F;
   font-family: 'Merriweather', serif;
   font-size: 2rem;
   font-weight: 700;
