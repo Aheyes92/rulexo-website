@@ -819,13 +819,93 @@
       transition: opacity 0.65s ease, transform 0.65s ease;
     }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── HAMBURGER & MOBILE MENU ──────── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      margin-right: -4px;
+    }
+    .ham-line {
+      width: 22px;
+      height: 2px;
+      background: #777;
+      border-radius: 2px;
+      transition: background 0.2s;
+      display: block;
+    }
+    .nav-hamburger:hover .ham-line { background: #fff; }
+    .nav-mobile {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 16px 24px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .nav-mobile-link {
+      font-size: 1rem;
+      color: #666;
+      text-decoration: none;
+      padding: 12px 4px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-family: 'Lato', sans-serif;
+      transition: color 0.2s;
+    }
+    .nav-mobile-link.active,
+    .nav-mobile-link:hover { color: #fff; }
+    .nav-mobile-cta {
+      margin-top: 14px;
+      text-align: center;
+      justify-content: center;
+      width: 100%;
+    }
+    [x-cloak] { display: none !important; }
+
+    /* ── RESPONSIVE ────────────────────── */
+    @media (max-width: 768px) {
+      .nav-inner { padding: 0 20px; }
+      .nav-links { display: none !important; }
+      .nav-cta   { display: none !important; }
+      .nav-hamburger { display: flex; }
+
+      #hero { padding: 80px 20px 96px; min-height: 70vh; }
+      .hero-sub { max-width: 100%; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions a { text-align: center; justify-content: center; }
+
+      .container { padding: 0 20px; }
+      .section { padding: 56px 0; }
+
+      .how-steps { flex-direction: column; gap: 16px; }
+      .how-connector { display: none; }
+
+      .split-grid { grid-template-columns: 1fr; gap: 40px; }
+      .services-grid { grid-template-columns: 1fr; }
+
+      .stat-strip { grid-template-columns: 1fr; }
+      .stat-strip-item + .stat-strip-item {
+        border-left: none;
+        border-top: 1px solid rgba(255,255,255,0.05);
+      }
+
+      #cta { padding: 72px 20px 88px; }
+
+      #footer { padding: 32px 20px; }
+      .footer-row { flex-direction: column; align-items: flex-start; }
+      .footer-inner { gap: 20px; }
+    }
   </style>
 </head>
 
 <body>
 
   <!-- ═══ NAV ═══════════════════════════════════════════════════════ -->
-  <nav id="site-nav">
+  <nav id="site-nav" x-data="{ open: false }">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">RULEXO</a>
       <ul class="nav-links">
@@ -834,6 +914,17 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <a href="contact.html" class="nav-cta">Start free audit</a>
+      <button class="nav-hamburger" @click="open = !open" :aria-expanded="open.toString()" aria-label="Open menu">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+    <div class="nav-mobile" x-show="open" x-cloak>
+      <a href="index.html" class="nav-mobile-link active">Home</a>
+      <a href="services.html" class="nav-mobile-link">Services</a>
+      <a href="contact.html" class="nav-mobile-link">Contact</a>
+      <a href="contact.html" class="btn-primary nav-mobile-cta">Start free audit</a>
     </div>
   </nav>
 
