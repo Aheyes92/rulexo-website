@@ -66,13 +66,10 @@
       <!-- Left: Form -->
       <div class="fade-in">
         <form
+          id="contact-form"
           name="contact"
-          method="POST"
-          netlify
-          data-netlify="true"
           class="flex flex-col gap-6"
         >
-          <input type="hidden" name="form-name" value="contact" />
 
           <div>
             <label class="block text-sm font-bold mb-2 text-white" style="font-family: 'Lato', sans-serif;" for="name">Name</label>
@@ -141,6 +138,7 @@
             <p style="margin-top: 12px; font-size: 0.8125rem; color: var(--muted); font-family: 'Lato', sans-serif; line-height: 1.6;">
               We'll review your details and be in touch within 24 hours to book your free call.
             </p>
+            <p id="form-error" style="display:none; margin-top: 12px; font-size: 0.875rem; color: #f87171; font-family: 'Lato', sans-serif; line-height: 1.6;"></p>
           </div>
         </form>
       </div>
@@ -199,6 +197,46 @@
     }, { threshold: 0.12 });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      const errorEl = document.getElementById('form-error');
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      errorEl.style.display = 'none';
+
+      const payload = {
+        lead: {
+          name:          form.querySelector('#name').value.trim(),
+          business_type: form.querySelector('#business-type').value.trim(),
+          phone:         form.querySelector('#phone').value.trim(),
+          email:         form.querySelector('#email').value.trim(),
+          message:       form.querySelector('#time-sink').value.trim(),
+        },
+        source:    'website',
+        client_id: 1,
+        mode:      'email_only',
+      };
+
+      try {
+        const res = await fetch('https://rulexo-enquiry-production.up.railway.app/enquiry', {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error('Server error');
+        form.outerHTML = '<p style="color:#fff;font-family:\'Lato\',sans-serif;font-size:1rem;line-height:1.8;">Thanks, we\'ll be in touch within 24 hours.</p>';
+      } catch (err) {
+        errorEl.textContent = 'Something went wrong. Please try again or email us at info@rulexo.com.';
+        errorEl.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Start free audit';
+      }
+    });
   </script>
 
 </body>
