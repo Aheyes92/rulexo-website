@@ -57,12 +57,16 @@
     }
     .nav-logo {
       font-family: 'Merriweather', serif;
-      font-weight: 700;
+      font-weight: 400;
       font-size: 1.5rem;
-      color: var(--green-lt);
+      color: #fff;
       text-decoration: none;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      line-height: 1;
     }
     .nav-links {
       display: flex;
@@ -322,7 +326,7 @@
       align-items: center;
     }
     .pipeline {
-      background: var(--surface-2);
+      background: rgba(45,106,79,0.08);
       border: 1px solid rgba(255,255,255,0.06);
       border-radius: 18px;
       padding: 32px;
@@ -378,7 +382,7 @@
     }
     .service-card {
       position: relative;
-      background: var(--surface-2);
+      background: rgba(45,106,79,0.08);
       border: 1px solid rgba(255,255,255,0.05);
       border-left: 3px solid #2D6A4F;
       border-radius: 16px;
@@ -596,12 +600,16 @@
     }
     .footer-logo {
       font-family: 'Merriweather', serif;
-      font-weight: 700;
+      font-weight: 400;
       font-size: 1rem;
-      color: #52b788;
+      color: #fff;
       text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.01em;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3px;
+      line-height: 1;
     }
     .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
     .footer-links a {
@@ -657,7 +665,7 @@
     .how-step {
       flex: 1;
       position: relative;
-      background: var(--surface-2);
+      background: rgba(45,106,79,0.08);
       border: 1px solid rgba(255,255,255,0.05);
       border-radius: 16px;
       padding: 28px;
@@ -748,7 +756,7 @@
     .stat-strip {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      background: var(--surface-2);
+      background: rgba(45,106,79,0.08);
       border: 1px solid rgba(255,255,255,0.05);
       border-radius: 20px;
       overflow: hidden;
@@ -792,7 +800,7 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      background: #0d0d0d;
+      background: rgba(45,106,79,0.08);
       border: 1px solid rgba(255,255,255,0.06);
       border-radius: 14px;
       padding: 28px 32px;
@@ -908,7 +916,7 @@
   <!-- ═══ NAV ═══════════════════════════════════════════════════════ -->
   <nav id="site-nav" x-data="{ open: false }">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">RULEXO</a>
+      <a href="index.html" class="nav-logo">rulexo<span style="display:block;height:2px;background:#2D6A4F;border-radius:1px;width:100%;"></span></a>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="services.html">Services</a></li>
@@ -965,7 +973,7 @@
 
       <!-- Sub -->
       <p class="hero-sub">
-        The job ends when you leave site. With Rulexo, the admin does too.
+        We handle the work that follows you home.
       </p>
 
       <!-- CTAs -->
@@ -1304,7 +1312,7 @@
   <footer id="footer">
     <div class="footer-inner">
       <div class="footer-row">
-        <a href="index.html" class="footer-logo">RULEXO</a>
+        <a href="index.html" class="footer-logo">rulexo<span style="display:block;height:2px;background:#2D6A4F;border-radius:1px;width:100%;"></span></a>
         <nav class="footer-links">
           <a href="index.html">Home</a>
           <a href="services.html">Services</a>
