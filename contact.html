@@ -210,20 +210,15 @@
       errorEl.style.display = 'none';
 
       const payload = {
-        lead: {
-          name:          form.querySelector('#name').value.trim(),
-          business_type: form.querySelector('#business-type').value.trim(),
-          phone:         form.querySelector('#phone').value.trim(),
-          email:         form.querySelector('#email').value.trim(),
-          message:       form.querySelector('#time-sink').value.trim(),
-        },
-        source:    'website',
-        client_id: 1,
-        mode:      'email_only',
+        name:          form.querySelector('#name').value.trim(),
+        business_type: form.querySelector('#business-type').value.trim(),
+        phone:         form.querySelector('#phone').value.trim(),
+        email:         form.querySelector('#email').value.trim(),
+        message:       form.querySelector('#time-sink').value.trim(),
       };
 
       try {
-        const res = await fetch('https://rulexo-enquiry-production.up.railway.app/enquiry', {
+        const res = await fetch('https://rulexo-enquiry-production.up.railway.app/webhooks/website?client_id=1&mode=email_only', {
           method:  'POST',
           headers: { 'Content-Type': 'application/json' },
           body:    JSON.stringify(payload),
