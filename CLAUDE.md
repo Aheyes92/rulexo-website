@@ -22,7 +22,7 @@ Do NOT stop after one pass. Always do at least 2 comparison rounds. Only stop wh
 
 ## What this is
 
-Static 3-page marketing website for Rulexo (rulexo.co.uk), an AI automation service for UK trade businesses. No build step, no framework, no dependencies to install. Open any `.html` file in a browser to preview locally.
+Static 3-page marketing website for Rulexo (rulexo.com), an AI automation service for UK trade businesses. No build step, no framework, no dependencies to install. Open any `.html` file in a browser to preview locally.
 
 ## Stack
 

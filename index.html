@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZDJN68XW9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HZDJN68XW9');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rulexo — AI Systems for UK Tradespeople</title>
-  <meta name="description" content="Rulexo builds AI automation systems that handle enquiries, follow-ups and marketing for UK trade businesses. No missed leads, no evenings lost to admin." />
+  <title>Rulexo — Operational Systems for Construction Businesses</title>
+  <meta name="description" content="Rulexo builds operational systems for construction businesses. Documentation, enquiry handling, and admin automated so your team can focus on the build." />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +28,7 @@
       --surface:   #0e0e0e;
       --surface-2: #131313;
       --border:    rgba(255,255,255,0.07);
-      --green:     #2D6A4F;
+      --green:     #255B45;
       --green-lt:  #52b788;
       --text:      #efefef;
       --muted:     #555;
@@ -36,7 +45,7 @@
       overflow-x: hidden;
     }
 
-    /* ── NAV ───────────────────────────── */
+    /* NAV */
     #site-nav {
       position: sticky;
       top: 0;
@@ -94,9 +103,9 @@
       transition: background 0.2s, transform 0.15s;
       font-family: 'Lato', sans-serif;
     }
-    .nav-cta:hover { background: #245c43; transform: translateY(-1px); }
+    .nav-cta:hover { background: #1e4d3a; transform: translateY(-1px); }
 
-    /* ── HERO ──────────────────────────── */
+    /* HERO */
     #hero {
       position: relative;
       text-align: center;
@@ -124,7 +133,7 @@
       width: 100%;
     }
 
-    /* ── ROTATING HEADLINE WORDS ───────── */
+    /* ROTATING HEADLINE WORDS */
     .hero-rotating {
       display: block;
       position: relative;
@@ -167,8 +176,8 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      border: 1px solid rgba(45,106,79,0.3);
-      background: rgba(45,106,79,0.08);
+      border: 1px solid rgba(37,91,69,0.3);
+      background: rgba(37,91,69,0.08);
       color: var(--green-lt);
       font-size: 0.75rem;
       font-weight: 700;
@@ -216,7 +225,7 @@
       flex-wrap: wrap;
     }
 
-    /* ── BUTTONS ───────────────────────── */
+    /* BUTTONS */
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -234,8 +243,8 @@
       transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
     }
     .btn-primary:hover {
-      background: #245c43;
-      box-shadow: 0 0 32px rgba(45,106,79,0.4);
+      background: #1e4d3a;
+      box-shadow: 0 0 32px rgba(37,91,69,0.4);
       transform: translateY(-2px);
     }
     .btn-outline {
@@ -260,7 +269,7 @@
       transform: translateY(-2px);
     }
 
-    /* ── LAYOUT ────────────────────────── */
+    /* LAYOUT */
     .container {
       max-width: 1120px;
       margin: 0 auto;
@@ -292,7 +301,7 @@
       color: var(--green-lt);
     }
 
-    /* ── STATS ─────────────────────────── */
+    /* STATS */
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -318,7 +327,7 @@
       line-height: 1.5;
     }
 
-    /* ── SPLIT ─────────────────────────── */
+    /* SPLIT */
     .split-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -326,7 +335,7 @@
       align-items: center;
     }
     .pipeline {
-      background: rgba(45,106,79,0.08);
+      background: rgba(37,91,69,0.08);
       border: 1px solid rgba(255,255,255,0.06);
       border-radius: 18px;
       padding: 32px;
@@ -339,13 +348,13 @@
       align-items: center;
       justify-content: center;
       padding: 18px 20px;
-      background: rgba(45,106,79,0.04);
-      border: 1px solid rgba(45,106,79,0.12);
+      background: rgba(37,91,69,0.04);
+      border: 1px solid rgba(37,91,69,0.12);
       border-radius: 10px;
       transition: background 0.35s ease, border-color 0.35s ease;
     }
     .pipe-step.pipe-active {
-      background: rgba(45,106,79,0.16);
+      background: rgba(37,91,69,0.16);
       border-color: rgba(82,183,136,0.45);
     }
     .pipe-dot {
@@ -354,7 +363,7 @@
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background: rgba(45,106,79,0.4);
+      background: rgba(37,91,69,0.4);
       flex-shrink: 0;
       transition: background 0.35s ease, box-shadow 0.35s ease;
     }
@@ -368,13 +377,13 @@
       display: flex;
       justify-content: center;
       padding: 5px 0;
-      color: rgba(45,106,79,0.3);
+      color: rgba(37,91,69,0.3);
       font-size: 1.125rem;
       transition: color 0.35s ease;
     }
     .pipe-conn.pipe-conn-active { color: rgba(82,183,136,0.7); }
 
-    /* ── SERVICE CARDS ─────────────────── */
+    /* SERVICE CARDS */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -382,16 +391,16 @@
     }
     .service-card {
       position: relative;
-      background: rgba(45,106,79,0.08);
+      background: rgba(37,91,69,0.08);
       border: 1px solid rgba(255,255,255,0.05);
-      border-left: 3px solid #2D6A4F;
+      border-left: 3px solid #255B45;
       border-radius: 16px;
       padding: 32px;
       transition: border-color 0.25s, transform 0.25s;
     }
     .service-card:hover {
-      border-color: rgba(45,106,79,0.3);
-      border-left-color: #2D6A4F;
+      border-color: rgba(37,91,69,0.3);
+      border-left-color: #255B45;
       transform: translateY(-3px);
     }
     .service-card::before {
@@ -403,7 +412,7 @@
         135deg,
         transparent 15%,
         rgba(82,183,136,0.18) 45%,
-        rgba(45,106,79,0.13) 65%,
+        rgba(37,91,69,0.13) 65%,
         transparent 85%
       );
       background-size: 250% 250%;
@@ -438,7 +447,7 @@
       margin: 0;
     }
 
-    /* ── TESTIMONIAL ───────────────────── */
+    /* TESTIMONIAL */
     .testimonial-card {
       background: var(--surface-2);
       border: 1px solid rgba(255,255,255,0.05);
@@ -451,7 +460,7 @@
       width: 56px;
       height: 56px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #2D6A4F 0%, #1a3328 100%);
+      background: linear-gradient(135deg, #255B45 0%, #142d22 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -461,49 +470,8 @@
       color: var(--green-lt);
       flex-shrink: 0;
     }
-    .testimonial-quote {
-      font-family: 'Merriweather', serif;
-      font-style: italic;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #bbb;
-      margin: 0 0 36px;
-    }
-    .testimonial-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      padding-top: 32px;
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-    .t-stat-value {
-      font-family: 'Merriweather', serif;
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: var(--green-lt);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .t-stat-label { font-size: 0.8125rem; color: var(--muted); }
 
-    /* ── LOGO BAR ──────────────────────── */
-    .logo-bar {
-      display: flex;
-      gap: 48px;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .logo-text {
-      font-family: 'Merriweather', serif;
-      font-weight: 700;
-      font-size: 0.875rem;
-      color: rgba(255,255,255,0.14);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    /* ── FAQ ───────────────────────────── */
+    /* FAQ */
     .faq-list { max-width: 720px; margin: 0 auto; }
     .faq-item { border-bottom: 1px solid rgba(255,255,255,0.06); }
     .faq-btn {
@@ -547,7 +515,7 @@
       margin: 0;
     }
 
-    /* ── CTA SECTION ───────────────────── */
+    /* CTA SECTION */
     #cta {
       position: relative;
       overflow: hidden;
@@ -562,7 +530,7 @@
       width: 800px;
       height: 500px;
       background: radial-gradient(ellipse at center,
-        rgba(45,106,79,0.16) 0%,
+        rgba(37,91,69,0.16) 0%,
         transparent 65%
       );
       pointer-events: none;
@@ -579,7 +547,7 @@
     .cta-headline em { font-style: italic; color: var(--green-lt); }
     .cta-sub { font-size: 1rem; color: var(--muted); line-height: 1.75; margin: 0 0 44px; }
 
-    /* ── FOOTER ────────────────────────── */
+    /* FOOTER */
     #footer {
       border-top: 1px solid rgba(255,255,255,0.05);
       padding: 48px 40px;
@@ -621,7 +589,7 @@
     .footer-links a:hover { color: #fff; }
     .footer-copy { font-size: 0.8125rem; color: rgba(255,255,255,0.18); text-align: center; margin: 0; }
 
-    /* ── FEATURE BOXES ────────────────── */
+    /* FEATURE BOXES */
     .feat-box {
       background: var(--surface-2);
       padding: 40px 36px;
@@ -657,7 +625,7 @@
       margin: 0;
     }
 
-    /* ── HOW IT WORKS ─────────────────── */
+    /* HOW IT WORKS */
     .how-steps {
       display: flex;
       align-items: stretch;
@@ -665,7 +633,7 @@
     .how-step {
       flex: 1;
       position: relative;
-      background: rgba(45,106,79,0.08);
+      background: rgba(37,91,69,0.08);
       border: 1px solid rgba(255,255,255,0.05);
       border-radius: 16px;
       padding: 28px;
@@ -674,7 +642,7 @@
       gap: 14px;
       transition: border-color 0.25s;
     }
-    .how-step:hover { border-color: rgba(45,106,79,0.3); }
+    .how-step:hover { border-color: rgba(37,91,69,0.3); }
     @keyframes gradientSweep {
       0%   { background-position: 0% 0%; }
       50%  { background-position: 100% 100%; }
@@ -689,7 +657,7 @@
         135deg,
         transparent 15%,
         rgba(82,183,136,0.18) 45%,
-        rgba(45,106,79,0.13) 65%,
+        rgba(37,91,69,0.13) 65%,
         transparent 85%
       );
       background-size: 250% 250%;
@@ -706,8 +674,8 @@
       width: 44px;
       height: 44px;
       border-radius: 12px;
-      background: rgba(45,106,79,0.1);
-      border: 1px solid rgba(45,106,79,0.2);
+      background: rgba(37,91,69,0.1);
+      border: 1px solid rgba(37,91,69,0.2);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -719,7 +687,7 @@
       font-weight: 700;
       font-size: 0.6875rem;
       color: var(--green-lt);
-      background: rgba(45,106,79,0.15);
+      background: rgba(37,91,69,0.15);
       border: 1px solid rgba(82,183,136,0.25);
       border-radius: 100px;
       padding: 4px 10px;
@@ -752,11 +720,11 @@
       margin: 0;
     }
 
-    /* ── STAT STRIP ────────────────────── */
+    /* STAT STRIP */
     .stat-strip {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      background: rgba(45,106,79,0.08);
+      background: rgba(37,91,69,0.08);
       border: 1px solid rgba(255,255,255,0.05);
       border-radius: 20px;
       overflow: hidden;
@@ -782,46 +750,7 @@
       line-height: 1.5;
     }
 
-    /* ── PLATFORM GRID ─────────────────── */
-    .platform-section {
-      background: #060606;
-      padding: 72px 0;
-    }
-    .platform-grid {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      align-items: stretch;
-      flex-wrap: wrap;
-    }
-    .platform-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      background: rgba(45,106,79,0.08);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 14px;
-      padding: 28px 32px;
-      min-width: 130px;
-    }
-    .platform-mark {
-      font-family: 'Merriweather', serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: rgba(255,255,255,0.75);
-      letter-spacing: 0.01em;
-    }
-    .platform-name {
-      font-size: 0.6875rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.22);
-    }
-
-    /* ── FADE UP ───────────────────────── */
+    /* FADE UP */
     .fade-up {
       opacity: 0;
       transform: translateY(28px);
@@ -829,7 +758,7 @@
     }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-    /* ── HAMBURGER & MOBILE MENU ──────── */
+    /* HAMBURGER & MOBILE MENU */
     .nav-hamburger {
       display: none;
       flex-direction: column;
@@ -875,7 +804,7 @@
     }
     [x-cloak] { display: none !important; }
 
-    /* ── RESPONSIVE ────────────────────── */
+    /* RESPONSIVE */
     @media (max-width: 768px) {
       .nav-inner { padding: 0 20px; }
       .nav-links { display: none !important; }
@@ -913,16 +842,16 @@
 
 <body>
 
-  <!-- ═══ NAV ═══════════════════════════════════════════════════════ -->
+  <!-- NAV -->
   <nav id="site-nav" x-data="{ open: false }">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">rulexo<span style="display:block;height:2px;background:#2D6A4F;border-radius:1px;width:100%;"></span></a>
+      <a href="index.html" class="nav-logo">rulexo<span style="display:block;height:2px;background:#255B45;border-radius:1px;width:100%;"></span></a>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <a href="contact.html" class="nav-cta">Start free audit</a>
+      <a href="contact.html" class="nav-cta">Book a call</a>
       <button class="nav-hamburger" @click="open = !open" :aria-expanded="open.toString()" aria-label="Open menu">
         <span class="ham-line"></span>
         <span class="ham-line"></span>
@@ -933,21 +862,20 @@
       <a href="index.html" class="nav-mobile-link active">Home</a>
       <a href="services.html" class="nav-mobile-link">Services</a>
       <a href="contact.html" class="nav-mobile-link">Contact</a>
-      <a href="contact.html" class="btn-primary nav-mobile-cta">Start free audit</a>
+      <a href="contact.html" class="btn-primary nav-mobile-cta">Book a call</a>
     </div>
   </nav>
 
-  <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
+  <!-- HERO -->
   <section id="hero">
     <canvas id="hero-noise"></canvas>
     <canvas id="hero-canvas"></canvas>
     <div id="hero-content">
 
-      <!-- Small icon ring -->
       <div class="hero-icon">
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11 2L13.5 8.5H20L14.5 12.5L16.5 19L11 15L5.5 19L7.5 12.5L2 8.5H8.5L11 2Z"
-                stroke="#52b788" stroke-width="1.2" stroke-linejoin="round"/>
+          <rect x="3" y="3" width="16" height="16" rx="2" stroke="#52b788" stroke-width="1.2"/>
+          <path d="M7 8h8M7 12h5" stroke="#52b788" stroke-width="1.2" stroke-linecap="round"/>
         </svg>
       </div>
 
@@ -955,31 +883,31 @@
       <div style="margin-bottom: 36px;">
         <span class="hero-badge">
           <span class="badge-dot"></span>
-          AI Systems for UK Trade Businesses
+          Operational Systems for Construction
         </span>
       </div>
 
       <!-- Headline -->
       <h1 id="hero-headline" class="hero-headline">
-        Automate Smarter.<br>Win More Jobs.
+        We handle the work<br>behind the work.
         <span class="hero-rotating" aria-live="polite">
-          <span class="hero-word">With AI.</span>
-          <span class="hero-word">On Autopilot.</span>
-          <span class="hero-word">Effortlessly.</span>
-          <span class="hero-word">24/7.</span>
-          <span class="hero-word">In Minutes.</span>
+          <span class="hero-word">Documentation. Handled.</span>
+          <span class="hero-word">Enquiries. Responded to.</span>
+          <span class="hero-word">Admin. Off your plate.</span>
+          <span class="hero-word">RAMS. In minutes.</span>
+          <span class="hero-word">Workflows. Running.</span>
         </span>
       </h1>
 
       <!-- Sub -->
       <p class="hero-sub">
-        We handle the work that follows you home.
+        Operational systems for construction businesses under pressure.
       </p>
 
       <!-- CTAs -->
       <div class="hero-actions">
         <a id="hero-cta-primary" href="contact.html" class="btn-primary">
-          Start your free audit
+          Book a discovery call
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -991,7 +919,7 @@
     </div>
   </section>
 
-  <!-- ═══ HOW IT WORKS ════════════════════════════════════════════════ -->
+  <!-- HOW IT WORKS -->
   <section style="background: var(--surface); padding: 80px 0;">
     <div class="container">
       <div class="fade-up" style="margin-bottom: 52px;">
@@ -1008,8 +936,8 @@
             </div>
             <span class="how-badge">01</span>
           </div>
-          <h3 class="how-title">One free call</h3>
-          <p class="how-body">Tell us what work you're taking home. We'll find exactly what can be handed off and show you what that looks like for your business.</p>
+          <h3 class="how-title">One discovery call</h3>
+          <p class="how-body">Tell us how your operations currently run. We map where time is being lost and show you exactly what can be handled automatically.</p>
         </div>
 
         <div class="how-connector" aria-hidden="true"></div>
@@ -1023,8 +951,8 @@
             </div>
             <span class="how-badge">02</span>
           </div>
-          <h3 class="how-title">We build your system</h3>
-          <p class="how-body">Custom to your trade, your customers, and the way you work. Ready in days.</p>
+          <h3 class="how-title">We build the system</h3>
+          <p class="how-body">Custom to your business, your compliance requirements, and the way your team works. Integrated with your existing tools. Live in 2 to 3 weeks.</p>
         </div>
 
         <div class="how-connector" aria-hidden="true"></div>
@@ -1033,20 +961,20 @@
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
             <div class="how-icon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
               </svg>
             </div>
             <span class="how-badge">03</span>
           </div>
-          <h3 class="how-title">You get your evenings back</h3>
-          <p class="how-body">Enquiries handled. Quotes sent. Follow-ups done. You finish the job and actually switch off.</p>
+          <h3 class="how-title">Your team focuses on the build</h3>
+          <p class="how-body">Documentation generated. Enquiries handled. Admin running. Your team spends time on the work that moves projects forward, not the paperwork that follows it.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ═══ PROBLEM ════════════════════════════════════════════════════ -->
+  <!-- PROBLEM -->
   <section class="section">
     <div class="container">
       <div class="split-grid">
@@ -1054,13 +982,13 @@
         <div class="fade-up">
           <span class="section-label">The problem</span>
           <h2 class="section-heading" style="font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 24px;">
-            Every evening you spend on admin is an evening you're <em>not switching off.</em>
+            Every hour spent on documentation is an hour your team <em>isn't on the job.</em>
           </h2>
           <p style="font-size: 1rem; line-height: 1.8; color: #555; margin-bottom: 36px;">
-            Quotes, follow-ups, invoices, scheduling. It adds up to hours of work that follows you home, eats into your evenings, and pulls your focus away from actually growing your business.
+            RAMS, method statements, compliance paperwork, enquiry handling, scheduling. Construction businesses lose days every month to processes that should be running automatically. The work behind the work is killing operational capacity.
           </p>
           <a href="contact.html" class="btn-primary">
-            Get your free audit
+            Book a discovery call
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -1071,27 +999,27 @@
           <div class="pipeline" id="pipeline">
             <div class="pipe-step" data-pipe-step="0">
               <span class="pipe-dot"></span>
-              <span>Customer enquiry received</span>
+              <span>Project enquiry or tender received</span>
             </div>
             <div class="pipe-conn" data-pipe-conn="0">↓</div>
             <div class="pipe-step" data-pipe-step="1">
               <span class="pipe-dot"></span>
-              <span>Rulexo captures &amp; qualifies it</span>
+              <span>Rulexo qualifies and routes it</span>
             </div>
             <div class="pipe-conn" data-pipe-conn="1">↓</div>
             <div class="pipe-step" data-pipe-step="2">
               <span class="pipe-dot"></span>
-              <span>Professional quote generated</span>
+              <span>Documentation generated automatically</span>
             </div>
             <div class="pipe-conn" data-pipe-conn="2">↓</div>
             <div class="pipe-step" data-pipe-step="3">
               <span class="pipe-dot"></span>
-              <span>Sent to customer within minutes</span>
+              <span>Sent to the right person instantly</span>
             </div>
             <div class="pipe-conn" data-pipe-conn="3">↓</div>
             <div class="pipe-step" data-pipe-step="4">
               <span class="pipe-dot"></span>
-              <span>Follow-up scheduled automatically</span>
+              <span>Compliance tracked and filed</span>
             </div>
           </div>
         </div>
@@ -1100,63 +1028,63 @@
     </div>
   </section>
 
-  <!-- ═══ SERVICES ═══════════════════════════════════════════════════ -->
+  <!-- SERVICES -->
   <section class="section" style="padding-top: 0;">
     <div class="container">
       <div style="text-align: center; margin-bottom: 56px;" class="fade-up">
         <span class="section-label">What we build</span>
         <h2 class="section-heading" style="font-size: clamp(1.75rem, 3vw, 2.5rem);">
-          AI systems. Built to run your business <em>while you run the job.</em>
+          Operational systems built to run <em>while your team builds.</em>
         </h2>
         <p style="margin: 20px auto 0; font-size: 1rem; line-height: 1.75; color: var(--muted); max-width: 540px;">
-          Every enquiry from Bark, Checkatrade, Facebook, and your website lands directly into your system. From there, everything below runs automatically.
+          Everything below is built around your existing processes. No new workflows to learn. No extra headcount required.
         </p>
       </div>
 
       <div class="services-grid">
 
         <div class="service-card fade-up">
-          <div style="width:44px;height:44px;background:rgba(45,106,79,0.15);border:1px solid rgba(45,106,79,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+          <div style="width:44px;height:44px;background:rgba(37,91,69,0.15);border:1px solid rgba(37,91,69,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
             </svg>
           </div>
           <p class="service-num">01</p>
-          <h3 class="service-title">Quote Generation</h3>
-          <p class="service-body">Accurate, professional quotes sent within minutes of an enquiry, while you're still on site with another customer.</p>
+          <h3 class="service-title">Documentation Automation</h3>
+          <p class="service-body">RAMS, method statements, and risk assessments generated from project details. What takes 90 minutes manually takes minutes with the system.</p>
         </div>
 
         <div class="service-card fade-up" style="transition-delay: 0.1s;">
-          <div style="width:44px;height:44px;background:rgba(45,106,79,0.1);border:1px solid rgba(45,106,79,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+          <div style="width:44px;height:44px;background:rgba(37,91,69,0.1);border:1px solid rgba(37,91,69,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
               <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
             </svg>
           </div>
           <p class="service-num">02</p>
-          <h3 class="service-title">Follow-up Automation</h3>
-          <p class="service-body">Personalised follow-ups to every prospect, every time. Sent in your voice, automatically.</p>
+          <h3 class="service-title">Enquiry Response</h3>
+          <p class="service-body">Instant, professional responses to project enquiries the moment they arrive. Never a slow reply to a principal contractor or a missed tender window.</p>
         </div>
 
         <div class="service-card fade-up" style="transition-delay: 0.15s;">
-          <div style="width:44px;height:44px;background:rgba(45,106,79,0.1);border:1px solid rgba(45,106,79,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+          <div style="width:44px;height:44px;background:rgba(37,91,69,0.1);border:1px solid rgba(37,91,69,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
             </svg>
           </div>
           <p class="service-num">03</p>
-          <h3 class="service-title">Admin Automation</h3>
-          <p class="service-body">Scheduling, invoice reminders, job confirmations. Handled without you lifting a finger. Evenings reclaimed.</p>
+          <h3 class="service-title">Workflow Automation</h3>
+          <p class="service-body">Job handoffs, scheduling, task assignments, reminders. The operational glue that keeps projects moving without constant management overhead.</p>
         </div>
 
         <div class="service-card fade-up" style="transition-delay: 0.2s;">
-          <div style="width:44px;height:44px;background:rgba(45,106,79,0.1);border:1px solid rgba(45,106,79,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+          <div style="width:44px;height:44px;background:rgba(37,91,69,0.1);border:1px solid rgba(37,91,69,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 1 8.835-2.535m0 0A23.74 23.74 0 0 1 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m-1.394 0a23.85 23.85 0 0 0-8.835-2.535" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
             </svg>
           </div>
           <p class="service-num">04</p>
-          <h3 class="service-title">Social &amp; Content</h3>
-          <p class="service-body">Posts from your completed jobs, scheduled automatically. Stay visible to local customers without extra effort.</p>
+          <h3 class="service-title">Compliance and Admin</h3>
+          <p class="service-body">Paperwork tracked, filed, and accessible. Less time chasing documents across inboxes. Compliance records organised without a dedicated resource to manage them.</p>
         </div>
 
       </div>
@@ -1167,62 +1095,27 @@
     </div>
   </section>
 
-  <!-- ═══ STAT STRIP ════════════════════════════════════════════════ -->
+  <!-- STAT STRIP -->
   <section class="section" style="background: #060606; padding: 72px 0;">
     <div class="container">
       <div class="stat-strip fade-up">
         <div class="stat-strip-item">
-          <div class="stat-strip-value">2 hrs+</div>
-          <div class="stat-strip-label">saved every evening</div>
+          <div class="stat-strip-value">90 min</div>
+          <div class="stat-strip-label">saved per documentation set</div>
         </div>
         <div class="stat-strip-item">
-          <div class="stat-strip-value">1+</div>
-          <div class="stat-strip-label">extra jobs per week on average</div>
+          <div class="stat-strip-value">2-3 wks</div>
+          <div class="stat-strip-label">from discovery call to live system</div>
         </div>
         <div class="stat-strip-item">
-          <div class="stat-strip-value">Days</div>
-          <div class="stat-strip-label">not weeks to get running</div>
+          <div class="stat-strip-value">Zero</div>
+          <div class="stat-strip-label">extra headcount required</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ PLATFORM SECTION ════════════════════════════════════════════ -->
-  <section class="platform-section">
-    <div class="container">
-      <div class="fade-up" style="text-align: center; margin-bottom: 44px;">
-        <span class="section-label">Integrations</span>
-        <h2 class="section-heading" style="font-size: clamp(1.5rem, 2.5vw, 2rem);">
-          We connect directly to where<br>your leads come from
-        </h2>
-      </div>
-      <div class="platform-grid fade-up" style="transition-delay: 0.1s;">
-
-        <div class="platform-item">
-          <div class="platform-mark">f</div>
-          <div class="platform-name">Facebook</div>
-        </div>
-
-        <div class="platform-item">
-          <div class="platform-mark">G</div>
-          <div class="platform-name">Google Business</div>
-        </div>
-
-        <div class="platform-item">
-          <div class="platform-mark">✓</div>
-          <div class="platform-name">Checkatrade</div>
-        </div>
-
-        <div class="platform-item">
-          <div class="platform-mark">B.</div>
-          <div class="platform-name">Bark.com</div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ FAQ ══════════════════════════════════════════════════════════ -->
+  <!-- FAQ -->
   <section class="section">
     <div class="container">
       <div style="text-align: center; margin-bottom: 56px;" class="fade-up">
@@ -1236,51 +1129,51 @@
 
         <div class="faq-item">
           <button class="faq-btn" @click="open = open === 1 ? null : 1">
-            <span class="faq-q">Do I need to be tech-savvy to use Rulexo?</span>
-            <span class="faq-icon" :style="open === 1 ? 'border-color:#2D6A4F;color:#52b788;transform:rotate(45deg)' : ''">+</span>
+            <span class="faq-q">Do we need to change how our team currently works?</span>
+            <span class="faq-icon" :style="open === 1 ? 'border-color:#255B45;color:#52b788;transform:rotate(45deg)' : ''">+</span>
           </button>
           <p class="faq-a" x-show="open === 1" x-transition style="display:none;">
-            Not at all. We handle everything: setup, integrations, testing. You tell us about your business and we build it. Once it's running, it needs no maintenance on your end.
+            No. We build around your existing workflows, not around ours. The systems integrate with what you already use. Your team keeps working the way they work. The difference is the repetitive parts run automatically.
           </p>
         </div>
 
         <div class="faq-item">
           <button class="faq-btn" @click="open = open === 2 ? null : 2">
             <span class="faq-q">How long does it take to get set up?</span>
-            <span class="faq-icon" :style="open === 2 ? 'border-color:#2D6A4F;color:#52b788;transform:rotate(45deg)' : ''">+</span>
+            <span class="faq-icon" :style="open === 2 ? 'border-color:#255B45;color:#52b788;transform:rotate(45deg)' : ''">+</span>
           </button>
           <p class="faq-a" x-show="open === 2" x-transition style="display:none;">
-            Most systems are live within 7–10 working days. We'll update you throughout and run a full test phase before anything goes live with your customers.
+            Most systems are live within 2 to 3 weeks from the discovery call. We run a full test phase before anything goes live, and we'll update you throughout the build.
           </p>
         </div>
 
         <div class="faq-item">
           <button class="faq-btn" @click="open = open === 3 ? null : 3">
-            <span class="faq-q">What trade types do you work with?</span>
-            <span class="faq-icon" :style="open === 3 ? 'border-color:#2D6A4F;color:#52b788;transform:rotate(45deg)' : ''">+</span>
+            <span class="faq-q">What size construction businesses do you work with?</span>
+            <span class="faq-icon" :style="open === 3 ? 'border-color:#255B45;color:#52b788;transform:rotate(45deg)' : ''">+</span>
           </button>
           <p class="faq-a" x-show="open === 3" x-transition style="display:none;">
-            Builders, plumbers, electricians, landscapers, roofers, decorators, joiners. Any UK trade business dealing with enquiries, quoting, and scheduling. If it's a trade, we can automate it.
+            UK construction businesses with operational teams. Main contractors, specialist subcontractors, civil engineering firms. If you're managing documentation, compliance, enquiries, or scheduling across a team, we can help.
           </p>
         </div>
 
         <div class="faq-item">
           <button class="faq-btn" @click="open = open === 4 ? null : 4">
             <span class="faq-q">Is there a contract or minimum term?</span>
-            <span class="faq-icon" :style="open === 4 ? 'border-color:#2D6A4F;color:#52b788;transform:rotate(45deg)' : ''">+</span>
+            <span class="faq-icon" :style="open === 4 ? 'border-color:#255B45;color:#52b788;transform:rotate(45deg)' : ''">+</span>
           </button>
           <p class="faq-a" x-show="open === 4" x-transition style="display:none;">
-            We'll be transparent about pricing on your free audit call. We believe in earning your business every month. No lock-ins, no hidden fees.
+            We'll be straightforward about pricing on the discovery call. We operate on a setup fee plus monthly retainer. No lock-ins. We earn your business every month by running systems that actually work.
           </p>
         </div>
 
         <div class="faq-item" style="border-bottom: none;">
           <button class="faq-btn" @click="open = open === 5 ? null : 5">
-            <span class="faq-q">What if it doesn't work for my business?</span>
-            <span class="faq-icon" :style="open === 5 ? 'border-color:#2D6A4F;color:#52b788;transform:rotate(45deg)' : ''">+</span>
+            <span class="faq-q">What if it doesn't fit how we operate?</span>
+            <span class="faq-icon" :style="open === 5 ? 'border-color:#255B45;color:#52b788;transform:rotate(45deg)' : ''">+</span>
           </button>
           <p class="faq-a" x-show="open === 5" x-transition style="display:none;">
-            That's exactly what the free audit is for. We'll tell you honestly whether automation will make a meaningful difference for your specific business. If it won't, we'll say so.
+            That's exactly what the discovery call is for. We'll tell you honestly whether automation will make a meaningful difference for your specific operation. If it won't, we'll say so.
           </p>
         </div>
 
@@ -1288,19 +1181,19 @@
     </div>
   </section>
 
-  <!-- ═══ CTA ════════════════════════════════════════════════════════ -->
+  <!-- CTA -->
   <section id="cta">
     <div class="cta-glow"></div>
     <div id="cta-content" class="fade-up">
       <span class="section-label" style="display: block; margin-bottom: 20px;">Get started</span>
       <h2 class="cta-headline">
-        Still doing it all yourself?<br><em>Let's change that.</em>
+        Still managing it all manually?<br><em>Let's change that.</em>
       </h2>
       <p class="cta-sub">
-        Book a free 20-minute call. We'll find exactly where you're losing time and show you what running on autopilot actually looks like for your business.
+        Book a 20 to 30 minute call. We'll map your operations and show you exactly what can be handled automatically, without adding headcount.
       </p>
       <a id="cta-btn" href="contact.html" class="btn-primary" style="font-size: 1rem; padding: 16px 36px;">
-        Start your free audit
+        Book a discovery call
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -1308,11 +1201,11 @@
     </div>
   </section>
 
-  <!-- ═══ FOOTER ══════════════════════════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer id="footer">
     <div class="footer-inner">
       <div class="footer-row">
-        <a href="index.html" class="footer-logo">rulexo<span style="display:block;height:2px;background:#2D6A4F;border-radius:1px;width:100%;"></span></a>
+        <a href="index.html" class="footer-logo">rulexo<span style="display:block;height:2px;background:#255B45;border-radius:1px;width:100%;"></span></a>
         <nav class="footer-links">
           <a href="index.html">Home</a>
           <a href="services.html">Services</a>
@@ -1328,7 +1221,7 @@
     </div>
   </footer>
 
-  <!-- ═══ SCRIPTS ══════════════════════════════════════════════════════ -->
+  <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
@@ -1452,14 +1345,11 @@
     let idx = 0;
 
     function tick() {
-      // clear all
       steps.forEach(s => s.classList.remove('pipe-active'));
       conns.forEach(c => c.classList.remove('pipe-conn-active'));
 
-      // highlight current step
       steps[idx].classList.add('pipe-active');
 
-      // light the connector leading INTO the next step (same index)
       if (conns[idx]) conns[idx].classList.add('pipe-conn-active');
 
       idx = (idx + 1) % steps.length;

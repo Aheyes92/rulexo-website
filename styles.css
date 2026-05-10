@@ -1,7 +1,7 @@
 :root {
   --bg: #0F0F0F;
   --surface: #161616;
-  --accent: #2D6A4F;
+  --accent: #255B45;
   --text: #FFFFFF;
   --muted: #888888;
 }
@@ -25,7 +25,7 @@ body {
 
 /* Accent button */
 .btn-accent {
-  background-color: #2D6A4F !important;
+  background-color: #255B45 !important;
   color: #ffffff !important;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
@@ -38,17 +38,17 @@ body {
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 .btn-accent:hover {
-  background-color: #245c43 !important;
-  box-shadow: 0 0 22px rgba(45, 106, 79, 0.5);
+  background-color: #1e4d3a !important;
+  box-shadow: 0 0 22px rgba(37, 91, 69, 0.5);
   color: #ffffff !important;
 }
 
 /* Card surface */
 .card {
   position: relative;
-  background-color: rgba(45,106,79,0.08);
+  background-color: rgba(37,91,69,0.08);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-left: 3px solid #2D6A4F;
+  border-left: 3px solid #255B45;
 }
 @keyframes gradientSweep {
   0%   { background-position: 0% 0%; }
@@ -64,7 +64,7 @@ body {
     135deg,
     transparent 15%,
     rgba(82,183,136,0.18) 45%,
-    rgba(45,106,79,0.13) 65%,
+    rgba(37,91,69,0.13) 65%,
     transparent 85%
   );
   background-size: 250% 250%;
@@ -93,7 +93,7 @@ body {
 
 /* Accent label */
 .label-accent {
-  color: #2D6A4F;
+  color: #255B45;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -102,7 +102,7 @@ body {
 
 /* Step number */
 .step-number {
-  color: #2D6A4F;
+  color: #255B45;
   font-family: 'Merriweather', serif;
   font-size: 2rem;
   font-weight: 700;
@@ -112,7 +112,7 @@ body {
 /* Horizontal rule accent */
 .rule-accent {
   border: none;
-  border-top: 1px solid rgba(45, 106, 79, 0.25);
+  border-top: 1px solid rgba(37, 91, 69, 0.25);
 }
 
 /* Form input */
