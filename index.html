@@ -896,6 +896,8 @@
           <span class="hero-word">Admin. Off your plate.</span>
           <span class="hero-word">RAMS. In minutes.</span>
           <span class="hero-word">Workflows. Running.</span>
+          <span class="hero-word">Variation orders. Generated.</span>
+          <span class="hero-word">Certs. Tracked automatically.</span>
         </span>
       </h1>
 
@@ -985,7 +987,7 @@
             Every hour spent on documentation is an hour your team <em>isn't on the job.</em>
           </h2>
           <p style="font-size: 1rem; line-height: 1.8; color: #555; margin-bottom: 36px;">
-            RAMS, method statements, compliance paperwork, enquiry handling, scheduling. Construction businesses lose days every month to processes that should be running automatically. The work behind the work is killing operational capacity.
+            Most construction businesses run on email, spreadsheets, and paper. Data gets re-entered by hand. Documents get lost or versioned wrongly. Quotes go out and nobody follows up. Subcontractor certs expire because nobody owns the tracking. The tools don't talk to each other, so the gaps between them become someone's job. That someone has better things to do.
           </p>
           <a href="contact.html" class="btn-primary">
             Book a discovery call
@@ -1051,7 +1053,7 @@
           </div>
           <p class="service-num">01</p>
           <h3 class="service-title">Documentation Automation</h3>
-          <p class="service-body">RAMS, method statements, and risk assessments generated from project details. What takes 90 minutes manually takes minutes with the system.</p>
+          <p class="service-body">RAMS, COSHH assessments, toolbox talks, and variation orders generated from project details. What takes 30 minutes per document manually takes seconds with the system.</p>
         </div>
 
         <div class="service-card fade-up" style="transition-delay: 0.1s;">
@@ -1062,7 +1064,7 @@
           </div>
           <p class="service-num">02</p>
           <h3 class="service-title">Enquiry Response</h3>
-          <p class="service-body">Instant, professional responses to project enquiries the moment they arrive. Never a slow reply to a principal contractor or a missed tender window.</p>
+          <p class="service-body">Instant, professional responses to project enquiries the moment they arrive. Automated follow-up on day 2 and day 5. No slow replies to principal contractors. No missed tender windows.</p>
         </div>
 
         <div class="service-card fade-up" style="transition-delay: 0.15s;">
@@ -1100,8 +1102,8 @@
     <div class="container">
       <div class="stat-strip fade-up">
         <div class="stat-strip-item">
-          <div class="stat-strip-value">90 min</div>
-          <div class="stat-strip-label">saved per documentation set</div>
+          <div class="stat-strip-value">30 min</div>
+          <div class="stat-strip-label">saved per document</div>
         </div>
         <div class="stat-strip-item">
           <div class="stat-strip-value">2-3 wks</div>
@@ -1167,13 +1169,23 @@
           </p>
         </div>
 
-        <div class="faq-item" style="border-bottom: none;">
+        <div class="faq-item">
           <button class="faq-btn" @click="open = open === 5 ? null : 5">
             <span class="faq-q">What if it doesn't fit how we operate?</span>
             <span class="faq-icon" :style="open === 5 ? 'border-color:#255B45;color:#52b788;transform:rotate(45deg)' : ''">+</span>
           </button>
           <p class="faq-a" x-show="open === 5" x-transition style="display:none;">
             That's exactly what the discovery call is for. We'll tell you honestly whether automation will make a meaningful difference for your specific operation. If it won't, we'll say so.
+          </p>
+        </div>
+
+        <div class="faq-item" style="border-bottom: none;">
+          <button class="faq-btn" @click="open = open === 6 ? null : 6">
+            <span class="faq-q">We already use software for project management. How does Rulexo fit alongside it?</span>
+            <span class="faq-icon" :style="open === 6 ? 'border-color:#255B45;color:#52b788;transform:rotate(45deg)' : ''">+</span>
+          </button>
+          <p class="faq-a" x-show="open === 6" x-transition style="display:none;">
+            We build around what you already have. Most construction businesses use three or four tools, none of which talk to each other properly. The time gets lost in the gaps between them. Rulexo closes those gaps. We integrate with your existing tools and automate the manual handoffs that currently require someone to remember to do them.
           </p>
         </div>
 
