@@ -7,13 +7,12 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-HZDJN68XW9');
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services — Rulexo | Operational Systems for Construction</title>
-  <meta name="description" content="Operational systems built for construction businesses. Documentation automation, enquiry response, workflow automation, and compliance management." />
+  <title>Operational Systems — Rulexo | Construction Workflow Infrastructure</title>
+  <meta name="description" content="Rulexo builds seven connected operational systems for construction businesses — project intelligence, site reporting, communication coordination, compliance tracking, and more." />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,10 +22,179 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     [x-cloak] { display: none !important; }
-    @media (max-width: 768px) {
-      .services-page-wrapper { padding: 0; }
-      .statement-block { padding-top: 48px !important; padding-bottom: 40px !important; }
-      .pricing-block { padding-bottom: 56px !important; }
+
+    .services-page-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .service-full {
+      grid-column: 1 / -1;
+    }
+
+    .svc-card {
+      position: relative;
+      background: rgba(37,91,69,0.07);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-left: 3px solid #255B45;
+      border-radius: 16px;
+      padding: 36px 36px 32px;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .svc-card:hover {
+      border-color: rgba(37,91,69,0.25);
+      border-left-color: #255B45;
+      transform: translateY(-2px);
+    }
+    .svc-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(135deg, transparent 15%, rgba(82,183,136,0.14) 45%, rgba(37,91,69,0.1) 65%, transparent 85%);
+      background-size: 250% 250%;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+      animation: gradientSweep 7s ease-in-out infinite paused;
+      pointer-events: none;
+    }
+    .svc-card:hover::before { opacity: 1; animation-play-state: running; }
+
+    @keyframes gradientSweep {
+      0%   { background-position: 0% 0%; }
+      50%  { background-position: 100% 100%; }
+      100% { background-position: 0% 0%; }
+    }
+
+    .svc-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(37,91,69,0.12);
+      border: 1px solid rgba(37,91,69,0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #52b788;
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+    .svc-num {
+      font-family: 'Merriweather', serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #255B45;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
+    .svc-title {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: #fff;
+      margin: 0 0 20px;
+      line-height: 1.3;
+    }
+    .svc-block {
+      margin-bottom: 18px;
+    }
+    .svc-block-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #255B45;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .svc-block-body {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: #555;
+      margin: 0;
+    }
+    .svc-examples {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .svc-examples ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .svc-examples li {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: #444;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .svc-examples li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(82,183,136,0.4);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    /* CONNECTED WORKFLOW */
+    .workflow-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      background: rgba(37,91,69,0.07);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .wf-step {
+      padding: 28px 24px;
+      border-right: 1px solid rgba(255,255,255,0.05);
+      position: relative;
+    }
+    .wf-step:last-child { border-right: none; }
+    .wf-num {
+      font-family: 'Merriweather', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: rgba(37,91,69,0.3);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .wf-title {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 0.9375rem;
+      color: #e0e0e0;
+      margin: 0 0 8px;
+    }
+    .wf-body {
+      font-size: 0.8125rem;
+      line-height: 1.65;
+      color: #444;
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .services-page-grid { grid-template-columns: 1fr; }
+      .service-full { grid-column: 1; }
+      .workflow-strip { grid-template-columns: 1fr 1fr; }
+      .wf-step { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
+      .wf-step:last-child { border-bottom: none; }
+      .svc-card-inner-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+      .svc-card-inner-grid .svc-examples { border-left: none !important; padding-left: 0 !important; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 24px !important; }
+    }
+    @media (max-width: 600px) {
+      .workflow-strip { grid-template-columns: 1fr; }
+      .svc-card { padding: 24px 20px; }
     }
   </style>
 </head>
@@ -38,10 +206,10 @@
       <a href="index.html" style="font-family:'Merriweather',serif;font-weight:400;font-size:1.5rem;color:#fff;letter-spacing:0.01em;text-decoration:none;display:inline-flex;flex-direction:column;align-items:flex-start;gap:4px;line-height:1;">rulexo<span style="display:block;height:2px;background:#255B45;border-radius:1px;width:100%;"></span></a>
       <ul class="hidden md:flex gap-8 text-sm">
         <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="services.html" class="nav-link active">Services</a></li>
+        <li><a href="services.html" class="nav-link active">Systems</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
-      <a href="contact.html" class="btn-accent hidden md:inline-block px-6 py-2 rounded-md text-sm">Book a call</a>
+      <a href="contact.html" class="btn-accent hidden md:inline-block px-6 py-2 rounded-md text-sm">Book a Free Operations Audit</a>
       <button @click="open = !open" class="md:hidden" style="background: none; border: none; cursor: pointer; padding: 8px; display: flex; flex-direction: column; gap: 5px; margin-right: -4px;" aria-label="Open menu" :aria-expanded="open.toString()">
         <span style="display: block; width: 22px; height: 2px; background: #777; border-radius: 2px;"></span>
         <span style="display: block; width: 22px; height: 2px; background: #777; border-radius: 2px;"></span>
@@ -50,146 +218,293 @@
     </div>
     <div x-show="open" x-cloak style="border-top: 1px solid rgba(255,255,255,0.05); padding: 16px 24px 28px; display: flex; flex-direction: column; gap: 2px; max-width: 80rem; margin: 0 auto;">
       <a href="index.html" class="nav-link" style="display: block; padding: 12px 4px; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 1rem;">Home</a>
-      <a href="services.html" class="nav-link active" style="display: block; padding: 12px 4px; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 1rem;">Services</a>
+      <a href="services.html" class="nav-link active" style="display: block; padding: 12px 4px; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 1rem;">Systems</a>
       <a href="contact.html" class="nav-link" style="display: block; padding: 12px 4px; font-size: 1rem;">Contact</a>
-      <a href="contact.html" class="btn-accent px-6 py-3 rounded-md text-sm text-center" style="margin-top: 16px; display: block;">Book a call</a>
+      <a href="contact.html" class="btn-accent px-6 py-3 rounded-md text-sm text-center" style="margin-top: 16px; display: block;">Book a Free Operations Audit</a>
     </div>
   </header>
 
-<div style="max-width: 960px; margin: 0 auto;">
+  <div style="max-width: 1040px; margin: 0 auto;">
 
-  <!-- Page header -->
-  <section class="px-6 pt-20 pb-16 text-center">
-    <p class="label-accent uppercase mb-6 tracking-widest">What we build</p>
-    <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mx-auto" style="font-family: 'Merriweather', serif; max-width: 620px;">
-      Operational systems for construction businesses
-    </h1>
-    <p class="mt-6 text-base leading-relaxed mx-auto" style="color: var(--muted); font-family: 'Lato', sans-serif; max-width: 500px;">
-      Every system is built around your existing workflows. No new processes to learn, no extra headcount required.
-    </p>
-  </section>
-
-  <!-- Intro -->
-  <div class="max-w-5xl mx-auto px-6 pb-10">
-    <p style="font-size: 1rem; line-height: 1.75; color: var(--muted); font-family: 'Lato', sans-serif; max-width: 600px;">
-      We build around the operations you already run. Documentation, enquiry handling, workflow management, and compliance admin handled automatically so your team can focus on the build.
-    </p>
-  </div>
-
-  <!-- Service cards -->
-  <section class="max-w-5xl mx-auto px-6 pb-0">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-      <!-- Documentation Automation -->
-      <div class="card fade-in rounded-xl p-8" style="background: rgba(37,91,69,0.08);">
-        <div style="width:44px;height:44px;background:rgba(37,91,69,0.15);border:1px solid rgba(37,91,69,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
-          </svg>
-        </div>
-        <div class="flex items-center gap-3 mb-5">
-          <span class="label-accent text-base">01</span>
-          <h2 class="text-white font-bold text-xl" style="font-family: 'Merriweather', serif;">Documentation Automation</h2>
-        </div>
-        <p class="text-sm leading-relaxed mb-4" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-          <strong style="color:#255B45;">What it does:</strong> RAMS, method statements, and risk assessments generated from project details. What your team currently spends 90 minutes on takes minutes with the system.
-        </p>
-        <p class="text-sm leading-relaxed" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-          <strong style="color:#255B45;">What it solves:</strong> Removes the documentation bottleneck before site starts. No more waiting on paperwork before a principal contractor will let your team through the gate.
-        </p>
-      </div>
-
-      <!-- Enquiry Response -->
-      <div class="card fade-in rounded-xl p-8" style="transition-delay: 0.1s;">
-        <div style="width:44px;height:44px;background:rgba(37,91,69,0.1);border:1px solid rgba(37,91,69,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
-          </svg>
-        </div>
-        <div class="flex items-center gap-3 mb-5">
-          <span class="label-accent text-base">02</span>
-          <h2 class="text-white font-bold text-xl" style="font-family: 'Merriweather', serif;">Enquiry Response</h2>
-        </div>
-        <p class="text-sm leading-relaxed mb-4" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-          <strong style="color:#255B45;">What it does:</strong> Instant, professional responses to project enquiries the moment they arrive. Every enquiry acknowledged, qualified, and routed without delay.
-        </p>
-        <p class="text-sm leading-relaxed" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-          <strong style="color:#255B45;">What it solves:</strong> Stops missed tender windows and slow replies to principal contractors. The response happens whether your team is on site, in a meeting, or out of hours.
-        </p>
-      </div>
-
-      <!-- Workflow Automation -->
-      <div class="card fade-in rounded-xl p-8" style="transition-delay: 0.15s;">
-        <div style="width:44px;height:44px;background:rgba(37,91,69,0.1);border:1px solid rgba(37,91,69,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
-          </svg>
-        </div>
-        <div class="flex items-center gap-3 mb-5">
-          <span class="label-accent text-base">03</span>
-          <h2 class="text-white font-bold text-xl" style="font-family: 'Merriweather', serif;">Workflow Automation</h2>
-        </div>
-        <p class="text-sm leading-relaxed mb-4" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-          <strong style="color:#255B45;">What it does:</strong> Job handoffs, scheduling, task assignments, and reminders handled automatically. The operational glue between your people and your projects.
-        </p>
-        <p class="text-sm leading-relaxed" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-          <strong style="color:#255B45;">What it solves:</strong> Cuts the management overhead that grows as projects stack up. Things stop falling through the cracks without someone chasing them manually.
-        </p>
-      </div>
-
-      <!-- Compliance and Admin -->
-      <div class="card fade-in rounded-xl p-8" style="transition-delay: 0.2s;">
-        <div style="width:44px;height:44px;background:rgba(37,91,69,0.1);border:1px solid rgba(37,91,69,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
-          </svg>
-        </div>
-        <div class="flex items-center gap-3 mb-5">
-          <span class="label-accent text-base">04</span>
-          <h2 class="text-white font-bold text-xl" style="font-family: 'Merriweather', serif;">Compliance and Admin</h2>
-        </div>
-        <p class="text-sm leading-relaxed mb-4" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-          <strong style="color:#255B45;">What it does:</strong> Compliance paperwork tracked, filed, and accessible. Documents stored where they need to be. Records maintained without someone manually managing them.
-        </p>
-        <p class="text-sm leading-relaxed" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-          <strong style="color:#255B45;">What it solves:</strong> Removes the admin burden that grows with every project. Less time chasing documents across inboxes, less risk of something missing when it matters.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Statement -->
-  <div class="statement-block max-w-5xl mx-auto px-6" style="padding-top: 80px; padding-bottom: 64px; text-align: center;">
-    <p style="font-size: 1.125rem; line-height: 1.85; color: #888; max-width: 580px; margin: 0 auto; font-family: 'Merriweather', serif; font-style: italic;">
-      Operational capacity is finite. The question is how much of it goes on the build, and how much goes on managing the work around it.
-    </p>
-  </div>
-
-  <!-- Pricing line -->
-  <section class="pricing-block max-w-5xl mx-auto px-6 pb-28">
-    <hr class="rule-accent mb-14" />
-    <div class="max-w-xl fade-in">
-      <p class="text-white text-xl font-bold mb-3" style="font-family: 'Merriweather', serif;">Priced around your operation, not a generic package.</p>
-      <p class="text-sm leading-relaxed mb-8" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-        Every business runs differently so every system is different. We scope exactly what needs automating on the discovery call, then give you a clear setup cost and a simple monthly retainer. No guesswork, no lock-ins.
+    <!-- Page header -->
+    <section class="px-6 pt-20 pb-14 text-center">
+      <p class="label-accent uppercase mb-6 tracking-widest">Operational systems</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mx-auto" style="font-family: 'Merriweather', serif; max-width: 680px;">
+        Seven connected systems.<br>One operational infrastructure.
+      </h1>
+      <p class="mt-6 text-base leading-relaxed mx-auto" style="color: var(--muted); font-family: 'Lato', sans-serif; max-width: 560px;">
+        Each system is built around your existing workflows and integrates with the tools you already use. No replacement required. No new processes to learn. Operational enhancement, not operational disruption.
       </p>
-      <a href="contact.html" class="btn-accent inline-block px-8 py-4 rounded-md text-sm">
-        Book a discovery call
-      </a>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="border-t py-8 px-6" style="border-color: rgba(255,255,255,0.06);">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm" style="color: var(--muted); font-family: 'Lato', sans-serif;">
-      <a href="index.html" style="font-family:'Merriweather',serif;font-weight:400;font-size:1rem;color:#fff;letter-spacing:0.01em;text-decoration:none;display:inline-flex;flex-direction:column;align-items:flex-start;gap:3px;line-height:1;">rulexo<span style="display:block;height:2px;background:#255B45;border-radius:1px;width:100%;"></span></a>
-      <div class="flex gap-6">
-        <span>rulexo.com</span>
-        <a href="mailto:info@rulexo.com" class="hover:text-white transition-colors duration-200">info@rulexo.com</a>
+    <!-- Service cards -->
+    <section class="px-6 pb-4">
+      <div class="services-page-grid">
+
+        <!-- 01 Project Intelligence Systems -->
+        <div class="svc-card fade-in">
+          <div class="svc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+          </div>
+          <p class="svc-num">System 01</p>
+          <h2 class="svc-title">Project Intelligence Systems</h2>
+          <div class="svc-block">
+            <span class="svc-block-label">What it does</span>
+            <p class="svc-block-body">Centralises your project knowledge — documents, contracts, decisions, site notes, correspondence — and makes it searchable. Ask a question in plain language and get the right answer immediately, sourced from your own project records.</p>
+          </div>
+          <div class="svc-block">
+            <span class="svc-block-label">What it solves</span>
+            <p class="svc-block-body">Stops operational knowledge being trapped in people's heads or buried in email threads. New site managers can get up to speed instantly. Disputes are resolved with accurate records. Nothing gets lost when a team member leaves.</p>
+          </div>
+          <div class="svc-examples">
+            <ul>
+              <li>Searchable project history across all live and completed contracts</li>
+              <li>Instant retrieval of previous decisions, scope agreements, and correspondence</li>
+              <li>Centralised operational knowledge accessible to the whole team</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 02 Site Reporting Automation -->
+        <div class="svc-card fade-in" style="transition-delay: 0.07s;">
+          <div class="svc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+            </svg>
+          </div>
+          <p class="svc-num">System 02</p>
+          <h2 class="svc-title">Site Reporting Automation</h2>
+          <div class="svc-block">
+            <span class="svc-block-label">What it does</span>
+            <p class="svc-block-body">Converts voice notes, brief messages, or form inputs from site into structured daily reports, progress summaries, and stakeholder updates. Delivered automatically to the right people in the right format — without a site manager spending their evening writing them up.</p>
+          </div>
+          <div class="svc-block">
+            <span class="svc-block-label">What it solves</span>
+            <p class="svc-block-body">Eliminates the two-hour daily reporting task that eats into operational time. Stakeholders stay informed without constant chasing. Issues and delays get logged properly. Project progress is visible in real time rather than at the end of the week.</p>
+          </div>
+          <div class="svc-examples">
+            <ul>
+              <li>Voice note on site → structured daily report sent automatically</li>
+              <li>Issue and delay tracking with automatic flagging</li>
+              <li>Weekly progress summaries for client and principal contractor updates</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 03 Communication Coordination Systems -->
+        <div class="svc-card fade-in" style="transition-delay: 0.1s;">
+          <div class="svc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+            </svg>
+          </div>
+          <p class="svc-num">System 03</p>
+          <h2 class="svc-title">Communication Coordination</h2>
+          <div class="svc-block">
+            <span class="svc-block-label">What it does</span>
+            <p class="svc-block-body">Structures and automates the flow of project communications — update digests, team notifications, subcontractor briefings, and client-facing summaries. The right information reaches the right people without manual coordination or the risk of something being missed.</p>
+          </div>
+          <div class="svc-block">
+            <span class="svc-block-label">What it solves</span>
+            <p class="svc-block-body">Replaces fragmented WhatsApp threads, buried email chains, and the verbal handoffs that get forgotten. Reduces the time project managers spend coordinating communication and the delays caused when information doesn't reach the right person in time.</p>
+          </div>
+          <div class="svc-examples">
+            <ul>
+              <li>Daily project digests delivered to relevant team members automatically</li>
+              <li>Subcontractor briefings and site access instructions coordinated systematically</li>
+              <li>Escalation workflows that flag unresolved issues to the right level</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 04 Operational Dashboards -->
+        <div class="svc-card fade-in" style="transition-delay: 0.14s;">
+          <div class="svc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5" />
+            </svg>
+          </div>
+          <p class="svc-num">System 04</p>
+          <h2 class="svc-title">Operational Dashboards</h2>
+          <div class="svc-block">
+            <span class="svc-block-label">What it does</span>
+            <p class="svc-block-body">Gives directors and operations managers a live view of project status, workflow progress, compliance position, and action items — without needing to chase individual updates from site or project managers.</p>
+          </div>
+          <div class="svc-block">
+            <span class="svc-block-label">What it solves</span>
+            <p class="svc-block-body">Eliminates the information gap between the office and site. Decisions get made on accurate, current data rather than last week's update. Issues that would previously sit unnoticed get surfaced and escalated before they become delays.</p>
+          </div>
+          <div class="svc-examples">
+            <ul>
+              <li>Live project status across all active contracts</li>
+              <li>Delay tracking and milestone monitoring with automatic alerts</li>
+              <li>Compliance position and outstanding action items visible at a glance</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 05 Knowledge & Document Systems -->
+        <div class="svc-card fade-in" style="transition-delay: 0.17s;">
+          <div class="svc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+            </svg>
+          </div>
+          <p class="svc-num">System 05</p>
+          <h2 class="svc-title">Document & Knowledge Systems</h2>
+          <div class="svc-block">
+            <span class="svc-block-label">What it does</span>
+            <p class="svc-block-body">Generates construction documentation from project details — RAMS, COSHH assessments, method statements, variation orders, toolbox talks — and organises existing documents into a searchable operational library accessible to your whole team.</p>
+          </div>
+          <div class="svc-block">
+            <span class="svc-block-label">What it solves</span>
+            <p class="svc-block-body">Removes the 90-minute documentation session before site can start. Ends the situation where a document exists but no one can find it. Gives new team members immediate access to company knowledge without relying on institutional memory.</p>
+          </div>
+          <div class="svc-examples">
+            <ul>
+              <li>RAMS, method statements, and COSHH generated in minutes from project information</li>
+              <li>Variation orders and site instructions produced from brief notes or site photos</li>
+              <li>Company document library made searchable — specs, contracts, previous RAMS</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 06 Compliance Operations -->
+        <div class="svc-card fade-in" style="transition-delay: 0.20s;">
+          <div class="svc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+            </svg>
+          </div>
+          <p class="svc-num">System 06</p>
+          <h2 class="svc-title">Compliance Operations</h2>
+          <div class="svc-block">
+            <span class="svc-block-label">What it does</span>
+            <p class="svc-block-body">Tracks certifications, insurance, CSCS cards, plant operator licences, and safety documentation across your workforce and supply chain. Monitors expiry dates, triggers renewal prompts, and maintains an organised compliance record without manual spreadsheet management.</p>
+          </div>
+          <div class="svc-block">
+            <span class="svc-block-label">What it solves</span>
+            <p class="svc-block-body">Stops compliance failures from slipping through. Prevents site delays caused by expired documentation. Removes the manual burden of tracking across dozens of subcontractors. Keeps records audit-ready without a dedicated administrator.</p>
+          </div>
+          <div class="svc-examples">
+            <ul>
+              <li>Certification and insurance expiry monitoring with advance renewal alerts</li>
+              <li>Subcontractor compliance tracking across your supply chain</li>
+              <li>Safety documentation organised, filed, and retrievable on demand</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 07 Estimating & Tender Support — full width -->
+        <div class="svc-card service-full fade-in" style="transition-delay: 0.23s;">
+          <div class="svc-card-inner-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+            <div>
+              <div class="svc-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                </svg>
+              </div>
+              <p class="svc-num">System 07</p>
+              <h2 class="svc-title">Estimating & Tender Support</h2>
+              <div class="svc-block">
+                <span class="svc-block-label">What it does</span>
+                <p class="svc-block-body">Handles the operational side of your tender pipeline — instant acknowledgement of new enquiries, project scope summaries, tender preparation support, and systematic follow-up. Keeps your tender pipeline moving without the process falling on one person.</p>
+              </div>
+              <div class="svc-block">
+                <span class="svc-block-label">What it solves</span>
+                <p class="svc-block-body">Stops tender windows being missed because a response was slow or a follow-up was forgotten. Removes the bottleneck when enquiries arrive during a busy site period. Ensures every principal contractor enquiry is acknowledged professionally and immediately — whatever time it arrives.</p>
+              </div>
+            </div>
+            <div>
+              <div class="svc-examples" style="margin-top: 0; padding-top: 0; border-top: none; border-left: 1px solid rgba(255,255,255,0.05); padding-left: 40px;">
+                <span class="svc-block-label" style="display:block; margin-bottom: 16px;">Workflow examples</span>
+                <ul style="gap: 14px;">
+                  <li>Instant professional acknowledgement of every new enquiry — including out of hours</li>
+                  <li>Automated follow-up on day 2 and day 5 if no response received</li>
+                  <li>Project scope summaries prepared from enquiry details to support estimating</li>
+                  <li>Tender status tracking across your active pipeline</li>
+                  <li>Win/loss tracking to inform future tender strategy</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
+    </section>
+
+    <!-- How it all connects -->
+    <section style="padding: 80px 24px 64px;">
+      <div style="margin-bottom: 40px;">
+        <span class="label-accent uppercase tracking-widest" style="display:block; margin-bottom: 16px;">How it all connects</span>
+        <h2 style="font-family: 'Merriweather', serif; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.25rem); color: #fff; margin: 0 0 16px; line-height: 1.2;">One connected operational loop, <span style="font-style:italic; color:#52b788;">end to end.</span></h2>
+        <p style="font-size: 0.9375rem; line-height: 1.75; color: var(--muted); max-width: 580px; margin: 0;">
+          Each system is effective on its own. Together, they form an operational infrastructure that covers every layer of how a construction business runs — from the first enquiry to project close.
+        </p>
+      </div>
+
+      <div class="workflow-strip fade-in">
+        <div class="wf-step">
+          <div class="wf-num">01</div>
+          <p class="wf-title">Enquiry arrives</p>
+          <p class="wf-body">Tender Support acknowledges instantly, qualifies the project, and routes it to the right person. Nothing misses a window.</p>
+        </div>
+        <div class="wf-step">
+          <div class="wf-num">02</div>
+          <p class="wf-title">Project kicks off</p>
+          <p class="wf-body">Document Systems generate RAMS, method statements, and COSHH. Project Intelligence files everything and makes it searchable from day one.</p>
+        </div>
+        <div class="wf-step">
+          <div class="wf-num">03</div>
+          <p class="wf-title">Works on site</p>
+          <p class="wf-body">Site Reporting converts daily notes into structured summaries. Communication Coordination keeps stakeholders informed without manual chasing.</p>
+        </div>
+        <div class="wf-step">
+          <div class="wf-num">04</div>
+          <p class="wf-title">Throughout & beyond</p>
+          <p class="wf-body">Compliance Operations tracks certs and safety records. Dashboards give directors live operational visibility across every active project.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statement -->
+    <div style="padding: 0 24px 64px; text-align: center;">
+      <p style="font-size: 1.125rem; line-height: 1.85; color: #666; max-width: 560px; margin: 0 auto; font-family: 'Merriweather', serif; font-style: italic;">
+        Operational capacity is finite. The question is how much of it goes on the build, and how much goes on managing the work around it.
+      </p>
     </div>
-  </footer>
+
+    <!-- Pricing -->
+    <section style="padding: 0 24px 96px;">
+      <hr style="border: none; border-top: 1px solid rgba(37,91,69,0.2); margin-bottom: 56px;" />
+      <div class="max-w-xl fade-in">
+        <p class="text-white text-xl font-bold mb-3" style="font-family: 'Merriweather', serif;">Scoped around your operation, not a generic package.</p>
+        <p class="text-sm leading-relaxed mb-2" style="color: var(--muted); font-family: 'Lato', sans-serif;">
+          Every construction business runs differently, so every system is different. On the operations audit we map your specific operation, identify the highest-impact opportunities, and scope exactly what needs building.
+        </p>
+        <p class="text-sm leading-relaxed mb-8" style="color: var(--muted); font-family: 'Lato', sans-serif;">
+          You receive a clear setup cost and a straightforward monthly retainer. No guesswork, no lock-ins. We earn your business every month by running systems that work.
+        </p>
+        <a href="contact.html" class="btn-accent inline-block px-8 py-4 rounded-md text-sm">
+          Book a Free Operations Audit
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t py-8 px-6" style="border-color: rgba(255,255,255,0.06);">
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm" style="color: var(--muted); font-family: 'Lato', sans-serif;">
+        <a href="index.html" style="font-family:'Merriweather',serif;font-weight:400;font-size:1rem;color:#fff;letter-spacing:0.01em;text-decoration:none;display:inline-flex;flex-direction:column;align-items:flex-start;gap:3px;line-height:1;">rulexo<span style="display:block;height:2px;background:#255B45;border-radius:1px;width:100%;"></span></a>
+        <div class="flex gap-6">
+          <span>rulexo.com</span>
+          <a href="mailto:info@rulexo.com" class="hover:text-white transition-colors duration-200">info@rulexo.com</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -200,11 +515,10 @@
           entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 
-</div>
 </body>
 </html>

@@ -7,13 +7,12 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-HZDJN68XW9');
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rulexo — Operational Systems for Construction Businesses</title>
-  <meta name="description" content="Rulexo builds operational systems for construction businesses. Documentation, enquiry handling, and admin automated so your team can focus on the build." />
+  <title>Rulexo: Operational Systems for Construction Businesses</title>
+  <meta name="description" content="Rulexo builds connected operational systems for UK construction businesses. Reporting, project coordination, documentation, compliance, and communication, working alongside your existing tools." />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -215,7 +214,7 @@
       font-size: clamp(1rem, 1.5vw, 1.125rem);
       line-height: 1.75;
       color: #666;
-      max-width: 500px;
+      max-width: 540px;
       margin: 0 auto 48px;
     }
     .hero-actions {
@@ -299,32 +298,6 @@
     .section-heading em {
       font-style: italic;
       color: var(--green-lt);
-    }
-
-    /* STATS */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-    .stat-item {
-      text-align: center;
-      padding: 52px 24px;
-    }
-    .stat-item + .stat-item {
-      border-left: 1px solid rgba(255,255,255,0.05);
-    }
-    .stat-value {
-      font-family: 'Merriweather', serif;
-      font-size: 2.75rem;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1;
-      margin-bottom: 10px;
-    }
-    .stat-label {
-      font-size: 0.8125rem;
-      color: var(--muted);
-      line-height: 1.5;
     }
 
     /* SPLIT */
@@ -444,184 +417,6 @@
       font-size: 0.9375rem;
       line-height: 1.7;
       color: #555;
-      margin: 0;
-    }
-
-    /* TESTIMONIAL */
-    .testimonial-card {
-      background: var(--surface-2);
-      border: 1px solid rgba(255,255,255,0.05);
-      border-radius: 20px;
-      padding: 48px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .avatar {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #255B45 0%, #142d22 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Merriweather', serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--green-lt);
-      flex-shrink: 0;
-    }
-
-    /* FAQ */
-    .faq-list { max-width: 720px; margin: 0 auto; }
-    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .faq-btn {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 24px 0;
-      background: none;
-      border: none;
-      cursor: pointer;
-      text-align: left;
-      gap: 20px;
-    }
-    .faq-q {
-      font-family: 'Merriweather', serif;
-      font-weight: 700;
-      font-size: 1rem;
-      color: #f0f0f0;
-      margin: 0;
-    }
-    .faq-icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      border: 1px solid rgba(255,255,255,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: #777;
-      font-size: 1rem;
-      line-height: 1;
-      transition: border-color 0.2s, color 0.2s, transform 0.3s;
-    }
-    .faq-a {
-      font-size: 0.9375rem;
-      line-height: 1.75;
-      color: var(--muted);
-      padding-bottom: 24px;
-      margin: 0;
-    }
-
-    /* CTA SECTION */
-    #cta {
-      position: relative;
-      overflow: hidden;
-      text-align: center;
-      padding: 120px 40px 140px;
-    }
-    .cta-glow {
-      position: absolute;
-      bottom: -80px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 800px;
-      height: 500px;
-      background: radial-gradient(ellipse at center,
-        rgba(37,91,69,0.16) 0%,
-        transparent 65%
-      );
-      pointer-events: none;
-    }
-    #cta-content { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
-    .cta-headline {
-      font-family: 'Merriweather', serif;
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      font-weight: 700;
-      line-height: 1.15;
-      color: #fff;
-      margin: 0 0 20px;
-    }
-    .cta-headline em { font-style: italic; color: var(--green-lt); }
-    .cta-sub { font-size: 1rem; color: var(--muted); line-height: 1.75; margin: 0 0 44px; }
-
-    /* FOOTER */
-    #footer {
-      border-top: 1px solid rgba(255,255,255,0.05);
-      padding: 48px 40px;
-    }
-    .footer-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-    }
-    .footer-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .footer-logo {
-      font-family: 'Merriweather', serif;
-      font-weight: 400;
-      font-size: 1rem;
-      color: #fff;
-      text-decoration: none;
-      letter-spacing: 0.01em;
-      display: inline-flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 3px;
-      line-height: 1;
-    }
-    .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
-    .footer-links a {
-      font-size: 0.875rem;
-      color: #444;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: #fff; }
-    .footer-copy { font-size: 0.8125rem; color: rgba(255,255,255,0.18); text-align: center; margin: 0; }
-
-    /* FEATURE BOXES */
-    .feat-box {
-      background: var(--surface-2);
-      padding: 40px 36px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      border-top: 2px solid transparent;
-      transition: border-color 0.25s, background 0.25s;
-    }
-    .feat-box:hover {
-      background: #161616;
-      border-color: var(--green);
-    }
-    .feat-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--green-lt);
-    }
-    .feat-title {
-      font-family: 'Merriweather', serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: #fff;
-      margin: 0;
-      line-height: 1.2;
-    }
-    .feat-body {
-      font-size: 0.9375rem;
-      line-height: 1.75;
-      color: var(--muted);
       margin: 0;
     }
 
@@ -750,6 +545,124 @@
       line-height: 1.5;
     }
 
+    /* FAQ */
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .faq-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      gap: 20px;
+    }
+    .faq-q {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #f0f0f0;
+      margin: 0;
+    }
+    .faq-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #777;
+      font-size: 1rem;
+      line-height: 1;
+      transition: border-color 0.2s, color 0.2s, transform 0.3s;
+    }
+    .faq-a {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--muted);
+      padding-bottom: 24px;
+      margin: 0;
+    }
+
+    /* CTA SECTION */
+    #cta {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 120px 40px 140px;
+    }
+    .cta-glow {
+      position: absolute;
+      bottom: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 500px;
+      background: radial-gradient(ellipse at center,
+        rgba(37,91,69,0.16) 0%,
+        transparent 65%
+      );
+      pointer-events: none;
+    }
+    #cta-content { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+    .cta-headline {
+      font-family: 'Merriweather', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: #fff;
+      margin: 0 0 20px;
+    }
+    .cta-headline em { font-style: italic; color: var(--green-lt); }
+    .cta-sub { font-size: 1rem; color: var(--muted); line-height: 1.75; margin: 0 0 44px; }
+
+    /* FOOTER */
+    #footer {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 48px 40px;
+    }
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-logo {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 1rem;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3px;
+      line-height: 1;
+    }
+    .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
+    .footer-links a {
+      font-size: 0.875rem;
+      color: #444;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { font-size: 0.8125rem; color: rgba(255,255,255,0.18); text-align: center; margin: 0; }
+
     /* FADE UP */
     .fade-up {
       opacity: 0;
@@ -757,6 +670,33 @@
       transition: opacity 0.65s ease, transform 0.65s ease;
     }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* PAIN POINTS LIST */
+    .pain-list {
+      list-style: none;
+      margin: 0 0 36px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .pain-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: #555;
+    }
+    .pain-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(37,91,69,0.5);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
 
     /* HAMBURGER & MOBILE MENU */
     .nav-hamburger {
@@ -838,8 +778,6 @@
       }
       .stat-strip-value { font-size: 2rem; }
 
-      .testimonial-card { padding: 28px 20px; }
-
       .faq-q { font-size: 0.9375rem; }
 
       #cta { padding: 72px 20px 88px; }
@@ -859,10 +797,10 @@
       <a href="index.html" class="nav-logo">rulexo<span style="display:block;height:2px;background:#255B45;border-radius:1px;width:100%;"></span></a>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li><a href="services.html">Systems</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <a href="contact.html" class="nav-cta">Book a call</a>
+      <a href="contact.html" class="nav-cta">Book a Free Operations Audit</a>
       <button class="nav-hamburger" @click="open = !open" :aria-expanded="open.toString()" aria-label="Open menu">
         <span class="ham-line"></span>
         <span class="ham-line"></span>
@@ -871,9 +809,9 @@
     </div>
     <div class="nav-mobile" x-show="open" x-cloak>
       <a href="index.html" class="nav-mobile-link active">Home</a>
-      <a href="services.html" class="nav-mobile-link">Services</a>
+      <a href="services.html" class="nav-mobile-link">Systems</a>
       <a href="contact.html" class="nav-mobile-link">Contact</a>
-      <a href="contact.html" class="btn-primary nav-mobile-cta">Book a call</a>
+      <a href="contact.html" class="btn-primary nav-mobile-cta">Book a Free Operations Audit</a>
     </div>
   </nav>
 
@@ -890,7 +828,6 @@
         </svg>
       </div>
 
-      <!-- Badge -->
       <div style="margin-bottom: 36px;">
         <span class="hero-badge">
           <span class="badge-dot"></span>
@@ -898,46 +835,194 @@
         </span>
       </div>
 
-      <!-- Headline -->
       <h1 id="hero-headline" class="hero-headline">
-        We handle the work<br>behind the work.
+        WhatsApp groups and spreadsheets aren't a system.
         <span class="hero-rotating" aria-live="polite">
-          <span class="hero-word">Documentation. Handled.</span>
-          <span class="hero-word">Enquiries. Responded to.</span>
-          <span class="hero-word">Admin. Off your plate.</span>
-          <span class="hero-word">RAMS. In minutes.</span>
-          <span class="hero-word">Workflows. Running.</span>
-          <span class="hero-word">Variation orders. Generated.</span>
-          <span class="hero-word">Certs. Tracked automatically.</span>
+          <span class="hero-word">Project reporting. Automated.</span>
+          <span class="hero-word">Site updates. Centralised.</span>
+          <span class="hero-word">Compliance. Tracked.</span>
+          <span class="hero-word">Document search. Instant.</span>
+          <span class="hero-word">Tender responses. Handled.</span>
+          <span class="hero-word">Communication. Coordinated.</span>
+          <span class="hero-word">Project visibility. Delivered.</span>
         </span>
       </h1>
 
-      <!-- Sub -->
       <p class="hero-sub">
-        Operational systems for construction businesses under pressure.
+        Rulexo connects your construction operation into one joined-up system. No new tools to learn, no disruption to your team. Just the right information, in the right place, when you need it.
       </p>
 
-      <!-- CTAs -->
       <div class="hero-actions">
         <a id="hero-cta-primary" href="contact.html" class="btn-primary">
-          Book a discovery call
+          Book a Free Operations Audit
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
         <a id="hero-cta-secondary" href="services.html" class="btn-outline">
-          See what we build
+          See our systems
         </a>
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section style="background: var(--surface); padding: 80px 0;">
+  <!-- THE OPERATIONAL GAP -->
+  <section class="section">
+    <div class="container">
+      <div class="split-grid">
+
+        <div class="fade-up">
+          <span class="section-label">The operational gap</span>
+          <h2 class="section-heading" style="font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 24px;">
+            Your Biggest Problem Isn't Your Team, <em>It's Your Systems.</em>
+          </h2>
+          <ul class="pain-list">
+            <li>Critical project updates getting lost between office staff, site teams, and subcontractors</li>
+            <li>Site reporting that takes two hours and still ends up incomplete</li>
+            <li>Compliance certificates expiring with no system to catch them</li>
+            <li>Project managers spending hours chasing updates that should already be in front of them</li>
+            <li>Tender windows missed because no one followed up in time</li>
+            <li>Three tools that don't talk to each other, and someone's job filling the gap</li>
+          </ul>
+          <p style="font-size: 1rem; line-height: 1.8; color: #555; margin-bottom: 36px;">
+            The tools exist. The coordination between them doesn't. Rulexo closes that gap.
+          </p>
+          <a href="contact.html" class="btn-primary">
+            Book a Free Operations Audit
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="fade-up" style="transition-delay: 0.15s;">
+          <div class="pipeline" id="pipeline">
+            <div class="pipe-step" data-pipe-step="0">
+              <span class="pipe-dot"></span>
+              <span>Enquiry or tender arrives in your inbox</span>
+            </div>
+            <div class="pipe-conn" data-pipe-conn="0">↓</div>
+            <div class="pipe-step" data-pipe-step="1">
+              <span class="pipe-dot"></span>
+              <span>Qualified, responded to, and tracked</span>
+            </div>
+            <div class="pipe-conn" data-pipe-conn="1">↓</div>
+            <div class="pipe-step" data-pipe-step="2">
+              <span class="pipe-dot"></span>
+              <span>Project documentation generated and filed</span>
+            </div>
+            <div class="pipe-conn" data-pipe-conn="2">↓</div>
+            <div class="pipe-step" data-pipe-step="3">
+              <span class="pipe-dot"></span>
+              <span>Site reporting collected and distributed</span>
+            </div>
+            <div class="pipe-conn" data-pipe-conn="3">↓</div>
+            <div class="pipe-step" data-pipe-step="4">
+              <span class="pipe-dot"></span>
+              <span>Compliance tracked, expiry alerts sent</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECTED WORKFLOW SYSTEMS -->
+  <section style="background: var(--surface); padding: 88px 0;">
+    <div class="container">
+      <div class="fade-up" style="text-align: center; margin-bottom: 56px;">
+        <span class="section-label">What we build</span>
+        <h2 class="section-heading" style="font-size: clamp(1.75rem, 3vw, 2.5rem);">
+          Every operational layer, <em>connected and coordinated.</em>
+        </h2>
+        <p style="margin: 20px auto 0; font-size: 1rem; line-height: 1.75; color: var(--muted); max-width: 560px;">
+          Rulexo connects the workflows your construction business runs on, from first enquiry through to project close. Built around your existing tools. No new processes to learn.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card fade-up">
+          <div style="width:44px;height:44px;background:rgba(37,91,69,0.15);border:1px solid rgba(37,91,69,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+          </div>
+          <p class="service-num">01</p>
+          <h3 class="service-title">Project Intelligence Systems</h3>
+          <p class="service-body">Searchable operational knowledge across your projects, contracts, and documents. Find any decision, compliance record, or site note in seconds, without searching through email chains or shared drives.</p>
+        </div>
+
+        <div class="service-card fade-up" style="transition-delay: 0.08s;">
+          <div style="width:44px;height:44px;background:rgba(37,91,69,0.1);border:1px solid rgba(37,91,69,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+            </svg>
+          </div>
+          <p class="service-num">02</p>
+          <h3 class="service-title">Site Reporting Automation</h3>
+          <p class="service-body">Voice notes from site converted into structured daily reports. Progress summaries, issue logs, and stakeholder updates generated automatically. Reporting that took two hours now takes minutes.</p>
+        </div>
+
+        <div class="service-card fade-up" style="transition-delay: 0.12s;">
+          <div style="width:44px;height:44px;background:rgba(37,91,69,0.1);border:1px solid rgba(37,91,69,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+            </svg>
+          </div>
+          <p class="service-num">03</p>
+          <h3 class="service-title">Communication Coordination</h3>
+          <p class="service-body">Project update digests, subcontractor notifications, and team coordination handled systematically. The right information reaches the right people, without manual chasing or fragmented message threads.</p>
+        </div>
+
+        <div class="service-card fade-up" style="transition-delay: 0.16s;">
+          <div style="width:44px;height:44px;background:rgba(37,91,69,0.1);border:1px solid rgba(37,91,69,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+            </svg>
+          </div>
+          <p class="service-num">04</p>
+          <h3 class="service-title">Document & Knowledge Systems</h3>
+          <p class="service-body">RAMS, method statements, COSHH assessments, and variation orders generated from project details. Contracts and operational documents made searchable. What takes 90 minutes manually takes minutes with the system.</p>
+        </div>
+
+        <div class="service-card fade-up" style="transition-delay: 0.20s;">
+          <div style="width:44px;height:44px;background:rgba(37,91,69,0.1);border:1px solid rgba(37,91,69,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+            </svg>
+          </div>
+          <p class="service-num">05</p>
+          <h3 class="service-title">Compliance Operations</h3>
+          <p class="service-body">Certification tracking, expiry monitoring, and renewal coordination. Safety documentation organised and accessible. Compliance records maintained without a dedicated resource managing them by hand.</p>
+        </div>
+
+        <div class="service-card fade-up" style="transition-delay: 0.24s;">
+          <div style="width:44px;height:44px;background:rgba(37,91,69,0.1);border:1px solid rgba(37,91,69,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+            </svg>
+          </div>
+          <p class="service-num">06</p>
+          <h3 class="service-title">Estimating & Tender Support</h3>
+          <p class="service-body">Enquiries acknowledged instantly, tender responses coordinated, and follow-up handled automatically. Project scope summaries prepared. Tender windows managed so nothing gets missed in a busy pipeline.</p>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;" class="fade-up">
+        <a href="services.html" class="btn-outline">View all operational systems</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="section">
     <div class="container">
       <div class="fade-up" style="margin-bottom: 52px;">
         <span class="section-label">How we work</span>
-        <h2 class="section-heading" style="font-size: clamp(1.75rem, 3vw, 2.5rem); margin-top: 16px;">A methodical approach that starts with <em>understanding your business,</em> not jumping straight into tools.</h2>
+        <h2 class="section-heading" style="font-size: clamp(1.75rem, 3vw, 2.5rem); margin-top: 16px;">A methodical process that maps your operations <em>before anything gets built.</em></h2>
       </div>
       <div class="how-steps">
 
@@ -950,8 +1035,8 @@
             </div>
             <span class="how-badge">01</span>
           </div>
-          <h3 class="how-title">Discover & Diagnose</h3>
-          <p class="how-body">We learn how your business actually runs, map where data moves between tools, and identify the real bottlenecks. We decide what should and shouldn't be automated before anything gets built.</p>
+          <h3 class="how-title">Discover & Map</h3>
+          <p class="how-body">We map how your operation actually runs: where information moves, where it gets lost, and what's costing your team the most time. We understand your workflows before any system gets built.</p>
         </div>
 
         <div class="how-connector" aria-hidden="true"></div>
@@ -965,8 +1050,8 @@
             </div>
             <span class="how-badge">02</span>
           </div>
-          <h3 class="how-title">Design, Build & Validate</h3>
-          <p class="how-body">We prioritise the highest-impact opportunities and decide where systems help and where they don't. Built to your compliance requirements, tested against real data, and explained in plain language before go-live.</p>
+          <h3 class="how-title">Build & Integrate</h3>
+          <p class="how-body">Systems built to your workflows and integrated with the tools you already use. We prioritise the highest-impact changes, test with real operational data, and explain everything before go-live.</p>
         </div>
 
         <div class="how-connector" aria-hidden="true"></div>
@@ -980,150 +1065,30 @@
             </div>
             <span class="how-badge">03</span>
           </div>
-          <h3 class="how-title">Launch, Monitor & Optimise</h3>
-          <p class="how-body">We launch with clear success metrics and safeguards in place. We monitor performance, collect feedback from your team, and continuously refine the logic so the system improves as your business evolves.</p>
+          <h3 class="how-title">Launch & Optimise</h3>
+          <p class="how-body">Systems go live with clear performance metrics and safeguards in place. We monitor, gather feedback from your team, and refine as your operation evolves. The system improves over time.</p>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- PROBLEM -->
-  <section class="section">
-    <div class="container">
-      <div class="split-grid">
-
-        <div class="fade-up">
-          <span class="section-label">The problem</span>
-          <h2 class="section-heading" style="font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 24px;">
-            Every hour spent on documentation is an hour your team <em>isn't on the job.</em>
-          </h2>
-          <p style="font-size: 1rem; line-height: 1.8; color: #555; margin-bottom: 36px;">
-            Most construction businesses run on email, spreadsheets, and paper. Data gets re-entered by hand. Documents get lost or versioned wrongly. Quotes go out and nobody follows up. Subcontractor certs expire because nobody owns the tracking. The tools don't talk to each other, so the gaps between them become someone's job. That someone has better things to do.
-          </p>
-          <a href="contact.html" class="btn-primary">
-            Book a discovery call
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </div>
-
-        <div class="fade-up" style="transition-delay: 0.15s;">
-          <div class="pipeline" id="pipeline">
-            <div class="pipe-step" data-pipe-step="0">
-              <span class="pipe-dot"></span>
-              <span>Project enquiry or tender received</span>
-            </div>
-            <div class="pipe-conn" data-pipe-conn="0">↓</div>
-            <div class="pipe-step" data-pipe-step="1">
-              <span class="pipe-dot"></span>
-              <span>Rulexo qualifies and routes it</span>
-            </div>
-            <div class="pipe-conn" data-pipe-conn="1">↓</div>
-            <div class="pipe-step" data-pipe-step="2">
-              <span class="pipe-dot"></span>
-              <span>Documentation generated automatically</span>
-            </div>
-            <div class="pipe-conn" data-pipe-conn="2">↓</div>
-            <div class="pipe-step" data-pipe-step="3">
-              <span class="pipe-dot"></span>
-              <span>Sent to the right person instantly</span>
-            </div>
-            <div class="pipe-conn" data-pipe-conn="3">↓</div>
-            <div class="pipe-step" data-pipe-step="4">
-              <span class="pipe-dot"></span>
-              <span>Compliance tracked and filed</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="section" style="padding-top: 0;">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 56px;" class="fade-up">
-        <span class="section-label">What we build</span>
-        <h2 class="section-heading" style="font-size: clamp(1.75rem, 3vw, 2.5rem);">
-          Operational systems built to run <em>while your team builds.</em>
-        </h2>
-        <p style="margin: 20px auto 0; font-size: 1rem; line-height: 1.75; color: var(--muted); max-width: 540px;">
-          Everything below is built around your existing processes. No new workflows to learn. No extra headcount required.
-        </p>
-      </div>
-
-      <div class="services-grid">
-
-        <div class="service-card fade-up">
-          <div style="width:44px;height:44px;background:rgba(37,91,69,0.15);border:1px solid rgba(37,91,69,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
-            </svg>
-          </div>
-          <p class="service-num">01</p>
-          <h3 class="service-title">Documentation Automation</h3>
-          <p class="service-body">RAMS, COSHH assessments, toolbox talks, and variation orders generated from project details. What takes 30 minutes per document manually takes seconds with the system.</p>
-        </div>
-
-        <div class="service-card fade-up" style="transition-delay: 0.1s;">
-          <div style="width:44px;height:44px;background:rgba(37,91,69,0.1);border:1px solid rgba(37,91,69,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
-            </svg>
-          </div>
-          <p class="service-num">02</p>
-          <h3 class="service-title">Enquiry Response</h3>
-          <p class="service-body">Instant, professional responses to project enquiries the moment they arrive. Automated follow-up on day 2 and day 5. No slow replies to principal contractors. No missed tender windows.</p>
-        </div>
-
-        <div class="service-card fade-up" style="transition-delay: 0.15s;">
-          <div style="width:44px;height:44px;background:rgba(37,91,69,0.1);border:1px solid rgba(37,91,69,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
-            </svg>
-          </div>
-          <p class="service-num">03</p>
-          <h3 class="service-title">Workflow Automation</h3>
-          <p class="service-body">Job handoffs, scheduling, task assignments, reminders. The operational glue that keeps projects moving without constant management overhead.</p>
-        </div>
-
-        <div class="service-card fade-up" style="transition-delay: 0.2s;">
-          <div style="width:44px;height:44px;background:rgba(37,91,69,0.1);border:1px solid rgba(37,91,69,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#52b788;margin-bottom:18px;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
-            </svg>
-          </div>
-          <p class="service-num">04</p>
-          <h3 class="service-title">Compliance and Admin</h3>
-          <p class="service-body">Paperwork tracked, filed, and accessible. Less time chasing documents across inboxes. Compliance records organised without a dedicated resource to manage them.</p>
-        </div>
-
-      </div>
-
-      <div style="text-align: center; margin-top: 40px;" class="fade-up">
-        <a href="services.html" class="btn-outline">View all services</a>
       </div>
     </div>
   </section>
 
   <!-- STAT STRIP -->
-  <section class="section" style="background: #060606; padding: 72px 0;">
+  <section style="background: #060606; padding: 72px 0;">
     <div class="container">
       <div class="stat-strip fade-up">
         <div class="stat-strip-item">
-          <div class="stat-strip-value">30 min</div>
-          <div class="stat-strip-label">saved per document</div>
+          <div class="stat-strip-value">8+ hrs</div>
+          <div class="stat-strip-label">saved per week on reporting and admin</div>
+          <div style="font-size: 0.75rem; color: #444; margin-top: 8px; line-height: 1.5;">For a contracts manager at £55k, that's over £1,000 a month in recovered capacity.</div>
         </div>
         <div class="stat-strip-item">
-          <div class="stat-strip-value">2-3 wks</div>
+          <div class="stat-strip-value">2–3 wks</div>
           <div class="stat-strip-label">from discovery call to live system</div>
         </div>
         <div class="stat-strip-item">
           <div class="stat-strip-value">Zero</div>
-          <div class="stat-strip-label">extra headcount required</div>
+          <div class="stat-strip-label">disruption to your existing tools or workflows</div>
         </div>
       </div>
     </div>
@@ -1143,61 +1108,61 @@
 
         <div class="faq-item">
           <button class="faq-btn" @click="open = open === 1 ? null : 1">
-            <span class="faq-q">Do we need to change how our team currently works?</span>
+            <span class="faq-q">Do we need to replace our current software?</span>
             <span class="faq-icon" :style="open === 1 ? 'border-color:#255B45;color:#52b788;transform:rotate(45deg)' : ''">+</span>
           </button>
           <p class="faq-a" x-show="open === 1" x-transition style="display:none;">
-            No. We build around your existing workflows, not around ours. The systems integrate with what you already use. Your team keeps working the way they work. The difference is the repetitive parts run automatically.
+            No. Rulexo works as an operational layer alongside your existing tools, whether that's Procore, Fieldview, email, spreadsheets, or WhatsApp. We connect the gaps between what you already use. Your team keeps working the way they work. The difference is the repetitive, manual parts run automatically.
           </p>
         </div>
 
         <div class="faq-item">
           <button class="faq-btn" @click="open = open === 2 ? null : 2">
-            <span class="faq-q">How long does it take to get set up?</span>
+            <span class="faq-q">How quickly can systems be operational?</span>
             <span class="faq-icon" :style="open === 2 ? 'border-color:#255B45;color:#52b788;transform:rotate(45deg)' : ''">+</span>
           </button>
           <p class="faq-a" x-show="open === 2" x-transition style="display:none;">
-            Most systems are live within 2 to 3 weeks from the discovery call. We run a full test phase before anything goes live, and we'll update you throughout the build.
+            Most systems are live within 2 to 3 weeks from the discovery call. We run a full test phase with real operational data before anything goes to your team, and we keep you updated throughout the build.
           </p>
         </div>
 
         <div class="faq-item">
           <button class="faq-btn" @click="open = open === 3 ? null : 3">
-            <span class="faq-q">What size construction businesses do you work with?</span>
+            <span class="faq-q">What kind of construction businesses do you work with?</span>
             <span class="faq-icon" :style="open === 3 ? 'border-color:#255B45;color:#52b788;transform:rotate(45deg)' : ''">+</span>
           </button>
           <p class="faq-a" x-show="open === 3" x-transition style="display:none;">
-            UK construction businesses with operational teams. Main contractors, specialist subcontractors, civil engineering firms. If you're managing documentation, compliance, enquiries, or scheduling across a team, we can help.
+            Main contractors, specialist subcontractors, and civil engineering firms across the UK. If you're managing projects, people, documentation, and compliance across a team, and operational friction is costing you time, we can help.
           </p>
         </div>
 
         <div class="faq-item">
           <button class="faq-btn" @click="open = open === 4 ? null : 4">
-            <span class="faq-q">Is there a contract or minimum term?</span>
+            <span class="faq-q">Does our team need any technical knowledge to use the systems?</span>
             <span class="faq-icon" :style="open === 4 ? 'border-color:#255B45;color:#52b788;transform:rotate(45deg)' : ''">+</span>
           </button>
           <p class="faq-a" x-show="open === 4" x-transition style="display:none;">
-            We'll be straightforward about pricing on the discovery call. We operate on a setup fee plus monthly retainer. No lock-ins. We earn your business every month by running systems that actually work.
+            None. Systems are designed around how your team already works. If they send WhatsApp messages, use email, or fill in a form, that's all they need to do. The system handles the rest. We build for the way construction teams actually operate, not the way software companies assume they do.
           </p>
         </div>
 
         <div class="faq-item">
           <button class="faq-btn" @click="open = open === 5 ? null : 5">
-            <span class="faq-q">What if it doesn't fit how we operate?</span>
+            <span class="faq-q">Is there a minimum contract term?</span>
             <span class="faq-icon" :style="open === 5 ? 'border-color:#255B45;color:#52b788;transform:rotate(45deg)' : ''">+</span>
           </button>
           <p class="faq-a" x-show="open === 5" x-transition style="display:none;">
-            That's exactly what the discovery call is for. We'll tell you honestly whether automation will make a meaningful difference for your specific operation. If it won't, we'll say so.
+            Setup fee plus monthly retainer. No lock-ins. We're transparent about pricing on the discovery call. We earn your business every month through systems that actually work and save your team measurable time.
           </p>
         </div>
 
         <div class="faq-item" style="border-bottom: none;">
           <button class="faq-btn" @click="open = open === 6 ? null : 6">
-            <span class="faq-q">We already use software for project management. How does Rulexo fit alongside it?</span>
+            <span class="faq-q">What makes Rulexo different from a standard automation service?</span>
             <span class="faq-icon" :style="open === 6 ? 'border-color:#255B45;color:#52b788;transform:rotate(45deg)' : ''">+</span>
           </button>
           <p class="faq-a" x-show="open === 6" x-transition style="display:none;">
-            We build around what you already have. Most construction businesses use three or four tools, none of which talk to each other properly. The time gets lost in the gaps between them. Rulexo closes those gaps. We integrate with your existing tools and automate the manual handoffs that currently require someone to remember to do them.
+            We focus specifically on construction operations. We understand RAMS, method statements, principal contractor requirements, subcontractor coordination, CCS compliance, and the operational pressures your business faces on live projects. We don't build generic automations. We build operational infrastructure designed for how construction businesses actually run.
           </p>
         </div>
 
@@ -1211,13 +1176,13 @@
     <div id="cta-content" class="fade-up">
       <span class="section-label" style="display: block; margin-bottom: 20px;">Get started</span>
       <h2 class="cta-headline">
-        Still managing it all manually?<br><em>Let's change that.</em>
+        Your operation is running on manual processes<br><em>it shouldn't need.</em>
       </h2>
       <p class="cta-sub">
-        Book a 20 to 30 minute call. We'll map your operations and show you exactly what can be handled automatically, without adding headcount.
+        Book a free operations audit. We'll map your current workflows, identify where time is being lost, and show you specifically what can be handled automatically, without adding headcount or replacing your existing tools.
       </p>
       <a id="cta-btn" href="contact.html" class="btn-primary" style="font-size: 1rem; padding: 16px 36px;">
-        Book a discovery call
+        Book a Free Operations Audit
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -1232,7 +1197,7 @@
         <a href="index.html" class="footer-logo">rulexo<span style="display:block;height:2px;background:#255B45;border-radius:1px;width:100%;"></span></a>
         <nav class="footer-links">
           <a href="index.html">Home</a>
-          <a href="services.html">Services</a>
+          <a href="services.html">Systems</a>
           <a href="contact.html">Contact</a>
         </nav>
         <div class="footer-links">
